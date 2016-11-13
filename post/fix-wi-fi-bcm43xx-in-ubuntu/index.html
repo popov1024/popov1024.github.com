@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.16" />
 
-  <title>Tags &middot; Andrey Popov</title>
+  <title>Fix wi-fi bcm43xx in Ubuntu &middot; Andrey Popov</title>
 
   
   
@@ -36,8 +36,6 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
   
-  
-  <link rel="alternate" type="application/rss+xml" title="Andrey Popov" href="https://popov1024.github.io/tags/index.xml" />
   
 
   
@@ -71,10 +69,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://popov1024.github.io/tags/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -188,43 +182,82 @@
 
 
 <div class="header">
-  <h1>Tags</h1>
+  <h1>Fix wi-fi bcm43xx in Ubuntu</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  <ul>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Dec 2015, 00:00</time>
+  </div>
+
+  
+
+  
+
   
   
-    <li>
-      <a href="1c">1c</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="mikrotik">mikrotik</a>
-      <span>&#40;1&#41;</span>
-    </li>
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/ubuntu">ubuntu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/wi-fi">wi-fi</a>
+    
+  </div>
   
-    <li>
-      <a href="routing">routing</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="teamcity">teamcity</a>
-      <span>&#40;1&#41;</span>
-    </li>
+
+</div>
+
+  <pre><code>$ sudo apt-get purge bcmwl-kernel-source
+</code></pre>
+
+<pre><code>$ sudo apt-get install --reinstall b43-fwcutter firmware-b43-installer
+</code></pre>
+
+<p>Reboot</p>
+
+
   
-    <li>
-      <a href="ubuntu">ubuntu</a>
-      <span>&#40;1&#41;</span>
-    </li>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://popov1024.github.io/post/2014-08-09-send-sms-from-shell-via-mikrotik/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://popov1024.github.io/post/2014-08-09-send-sms-from-shell-via-mikrotik/">send sms from shell via mikrotik</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/">Удобная маршрутизация Mikrotik (RouterOS)</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
   
-    <li>
-      <a href="wi-fi">wi-fi</a>
-      <span>&#40;1&#41;</span>
-    </li>
-  
-  </ul>
+
 </div>
 
 </div>
@@ -236,3 +269,4 @@
 
 </body>
 </html>
+

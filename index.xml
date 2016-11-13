@@ -7,8 +7,206 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <copyright>&amp;copy; 2016. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Aug 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Sep 2016 00:00:00 +0300</lastBuildDate>
     <atom:link href="https://popov1024.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Простой веб-сервер на Logstash</title>
+      <link>https://popov1024.github.io/post/prostoi-vieb-siervier-na-logstash/</link>
+      <pubDate>Tue, 06 Sep 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/prostoi-vieb-siervier-na-logstash/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;input {
+    http {
+    }
+}
+output {
+    stdout { codec =&amp;gt; rubydebug }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Logstash input jbdc every seconds</title>
+      <link>https://popov1024.github.io/post/logstash-input-jbdc-every-seconds/</link>
+      <pubDate>Mon, 08 Aug 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/logstash-input-jbdc-every-seconds/</guid>
+      <description>&lt;p&gt;&lt;code&gt;schedule =&amp;gt; &amp;quot;* * * * * *&amp;quot;&lt;/code&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Скачивание зависимостей пакетов yum</title>
+      <link>https://popov1024.github.io/post/skachivaniie-zavisimostiei-pakietov-yum/</link>
+      <pubDate>Sun, 03 Jul 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/skachivaniie-zavisimostiei-pakietov-yum/</guid>
+      <description>&lt;p&gt;Столкнулся с необходимостью установки докера на целевой хост без доступа в интернет.&lt;/p&gt;
+
+&lt;p&gt;Пазвернул посредство вагранта CentOS 7 и получил все пакеты (естественно прописав репозиторий докера):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo yum install --downloadonly --downloaddir=docker docker-engine
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Говорящий селектор класса в CSS!</title>
+      <link>https://popov1024.github.io/post/govoriashchii-sieliektor-klassa-v-css/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/govoriashchii-sieliektor-klassa-v-css/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;.titanic {float: none;}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TeamCity 1C:Enterprise 8</title>
+      <link>https://popov1024.github.io/post/teamcity-1c-enterprise-8/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/teamcity-1c-enterprise-8/</guid>
+      <description>
+
+&lt;h3 id=&#34;преамбула&#34;&gt;Преамбула&lt;/h3&gt;
+
+&lt;p&gt;Для автоматизации сборки конфигураций 1С:Предприятие 8 написал &lt;a href=&#34;https://github.com/popov1024/1CTeamCity&#34;&gt;скрипты&lt;/a&gt; на PowerShell для &lt;a href=&#34;https://www.jetbrains.com/teamcity/&#34;&gt;TeamCity&lt;/a&gt; (TC).&lt;/p&gt;
+
+&lt;p&gt;Это уже не первый мой опыт: в текущее время использую написанный мною на Ant сценарий, который верой и правдой собирает для версии платформы 8.2.&lt;/p&gt;
+
+&lt;p&gt;Что сподвигло к изменениям?&lt;/p&gt;
+
+&lt;p&gt;Прежде всего это выход платформы 8.3.6 в которой появилась возможность подключать конфигурацию в хранилищу. Т.е. позволяет автоматизировать создания сборки с нуля новых проектов.&lt;/p&gt;
+
+&lt;p&gt;Во-вторых, я организовал теперь все в виде шаблонов для TC с минимальным набором параметров сборки.&lt;/p&gt;
+
+&lt;p&gt;Сам процесс сборки подразумевает следующий порядок хранения:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;...
+builds\1.1.0\
+builds\1.1.0\1.1.0.1
+builds\1.1.0\1.1.0.2
+builds\1.1.0\1.1.0.3
+...
+builds\1.1.1\
+builds\1.1.0\1.1.0.3
+builds\1.1.0\1.1.1.1
+builds\1.1.0\1.1.1.2
+builds\1.1.0\1.1.1.3
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;как-настраивать&#34;&gt;Как настраивать&lt;/h3&gt;
+
+&lt;h5 id=&#34;создание-шаблона&#34;&gt;Создание шаблона&lt;/h5&gt;
+
+&lt;p&gt;Я организовал все в виде шаблонов для корневого проекта.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://popov1024.github.io/content/images/2016/05/Root_project-1cTeamCity.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Данный шаблон содержит набор шагов сборки:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;создание (&lt;a href=&#34;https://github.com/popov1024/1CTeamCity/blob/master/Build/Create.ps1&#34;&gt;Build/Create.ps1&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;обновление (&lt;a href=&#34;https://github.com/popov1024/1CTeamCity/blob/master/Build/Update.ps1&#34;&gt;Build/Update.ps1&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;сама сборка (&lt;a href=&#34;https://github.com/popov1024/1CTeamCity/blob/master/Build/Build.ps1&#34;&gt;Build/Build.ps1&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Каждый шаг я сделал в следующем виде:
+&lt;img src=&#34;https://popov1024.github.io/content/images/2016/05/1C83_Build_Template-1cTeamCity.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Я предпочитаю использовать тип сценария &lt;code&gt;Source code&lt;/code&gt;, так как в данном случае TC сам определяет все параметры сборки (указаны в виде шаблона %&amp;hellip;%) и проще вносить корректировки.&lt;/p&gt;
+
+&lt;p&gt;Параметры можно определить значениями по умолчанию.
+&lt;img src=&#34;https://popov1024.github.io/content/images/2016/05/1C83_Build_Template.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;настройка-агента&#34;&gt;Настройка агента&lt;/h4&gt;
+
+&lt;p&gt;В настройках самого агента сборки я прописываю пути к исполняемым файлам платформы, которые в последствие используются в сценарии.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://popov1024.github.io/content/images/2016/05/Agent_Parameters-1cTeamCity.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Пример настройки агента &lt;code&gt;BuildAgent\conf\buildAgent.properties&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;env.1cbin_8_3=C:\\Program Files (x86)\\1cv8\\8.3.8.1652\\bin\\1cv8.exe
+env.1cbin_8_3_8=C:\\Program Files (x86)\\1cv8\\8.3.8.1652\\bin\\1cv8.exe
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;создание-проекта&#34;&gt;Создание проекта&lt;/h4&gt;
+
+&lt;p&gt;Теперь любой новый создаваемый проект сборки можно указать что он будет основан на необходимом шаблоне.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://popov1024.github.io/content/images/2016/05/Build_Configuration-1cTeamCity.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Все параметры можно переопределять в соотвествии с проектом.&lt;/p&gt;
+
+&lt;p&gt;Если все сделано корректно, то процесс сборки будет сводиться к следующему виду.
+&lt;img src=&#34;https://popov1024.github.io/content/images/2016/05/Projects-1cTeamCity.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Полученный артефакты в результате сборки (&lt;code&gt;1cv8.cf&lt;/code&gt; и &lt;code&gt;1cv8.cfu&lt;/code&gt;) в случае успеха добавятся к сборке.
+&lt;img src=&#34;https://popov1024.github.io/content/images/2016/05/Build_-1cTeamCity.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Удобная маршрутизация Mikrotik (RouterOS)</title>
+      <link>https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/</guid>
+      <description>
+
+&lt;h4 id=&#34;задача&#34;&gt;Задача&lt;/h4&gt;
+
+&lt;p&gt;Необходимо маршрутизировать несколько ip или подсетей по одному правилу.&lt;/p&gt;
+
+&lt;h4 id=&#34;решение&#34;&gt;Решение&lt;/h4&gt;
+
+&lt;p&gt;Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Благо RouterOS поддерживает работу со списками и маркировку пакетов.&lt;/p&gt;
+
+&lt;p&gt;И так, создаем список &lt;code&gt;work&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ip firewall address-list
+add address=10.10.0.0/16 list=work
+add address=192.168.1.0/24 list=work
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Делаем пометку &lt;code&gt;workt&lt;/code&gt; пакетов согласно данного списка &lt;code&gt;work&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ip firewall mangle
+add action=mark-routing chain=prerouting dst-address-list=work new-routing-mark=workt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Собственно маршрутизация, согласно пометки &lt;code&gt;workt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ip route
+add distance=1 gateway=vpn-work routing-mark=workt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Теперь достаточно в список &lt;code&gt;work&lt;/code&gt; внести новый ip или подсеть, и он будет маршрутизироваться согласно правилам для этого листа.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fix wi-fi bcm43xx in Ubuntu</title>
+      <link>https://popov1024.github.io/post/fix-wi-fi-bcm43xx-in-ubuntu/</link>
+      <pubDate>Sun, 27 Dec 2015 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/fix-wi-fi-bcm43xx-in-ubuntu/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;$ sudo apt-get purge bcmwl-kernel-source
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install --reinstall b43-fwcutter firmware-b43-installer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Reboot&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>send sms from shell via mikrotik</title>
@@ -131,138 +329,6 @@
 &lt;p&gt;&lt;img src=&#34;http://24.media.tumblr.com/d572045390b505d7e7302192f69414e8/tumblr_mz04rbJsAH1tp5hr1o1_1280.png&#34; alt=&#34;youtube end &amp;amp; start&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Решил, что не нужно пропадать добру и выложил на &lt;a href=&#34;http://www.tumblr.com/&#34;&gt;тумблер&lt;/a&gt; в отдельный блог &lt;a href=&#34;http://myioslife.ander.mobi&#34;&gt;My iOS Life&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Оптимизация запросов SQL от Попова</title>
-      <link>https://popov1024.github.io/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/</link>
-      <pubDate>Sat, 04 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/</guid>
-      <description>&lt;p&gt;Обсуждали на работе оптимальность запросов и я в очередной раз свормулировал основное правило, которое нигде не пишут: :)
-&lt;code&gt;Запрос должен получать лишь ту информацию, которая необходима&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Вытекающие примеры:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;Select * From ...&lt;/code&gt; - это зло. Возвращаемые поля - только те, которые необходимы. Возврашаемые записи - только те, которые необходимы.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Select Top 1 field1, field2 ...&lt;/code&gt; - это очень правильно, даже если вы уверены, что наложенные ограничения всегда вернут одну запись.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Backup Stash</title>
-      <link>https://popov1024.github.io/post/2014-01-02-backup-stash/</link>
-      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/post/2014-01-02-backup-stash/</guid>
-      <description>&lt;pre&gt;&lt;code&gt;java -Dstash.home=/opt/stash-home/ -Dbackup.home=/opt/stash-backup -Dstash.user=user -Dstash.password=password -Dstash.baseUrl=http://example.com:7990 -jar /opt/stash-backup-client-1.1.0/stash-backup-client.jar
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Backup TeamCity</title>
-      <link>https://popov1024.github.io/post/2014-01-02-backup-teamcity/</link>
-      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/post/2014-01-02-backup-teamcity/</guid>
-      <description>&lt;p&gt;В моей конфигурации сервер TeamCity работает под CentOS. Установлен в &lt;code&gt;/opt/jetbrains/teamcity/&lt;/code&gt;, домашний каталог в &lt;code&gt;/home/teamcity/.BuildServer&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;/opt/jetbrains/teamcity/bin/maintainDB.sh backup -A /home/teamcity/.BuildServer --all
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Total balancer - start</title>
-      <link>https://popov1024.github.io/post/2013-12-30-total-balancer-start/</link>
-      <pubDate>Mon, 30 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/post/2013-12-30-total-balancer-start/</guid>
-      <description>&lt;p&gt;Собрался с силами и начал осуществлять свою давнюю мечту - сделать сервис сбора балансов с различных сервисов (операторы мобильной связи, интернет провайдеры и пр.)&lt;/p&gt;
-
-&lt;p&gt;Как-то так сложилось, что под iOS практически нет аналогичных приложений для РБ (по крайней мере на текущий момент).&lt;/p&gt;
-
-&lt;p&gt;Из технологий использую:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Node.js (Express)&lt;/li&gt;
-&lt;li&gt;Bootstrap 3&lt;/li&gt;
-&lt;li&gt;Heroku&lt;/li&gt;
-&lt;li&gt;MongoDB&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>hello world via Alfred2</title>
-      <link>https://popov1024.github.io/post/2013-12-23-hello-world-via-alfred2/</link>
-      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/post/2013-12-23-hello-world-via-alfred2/</guid>
-      <description>&lt;p&gt;Это проверка написания поста с помощью связки Octopress + Alfred 2 + iA Writer&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Трудности понимания</title>
-      <link>https://popov1024.github.io/post/2013-12-23-trudnosti-ponimaniia/</link>
-      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/post/2013-12-23-trudnosti-ponimaniia/</guid>
-      <description>&lt;p&gt;{% youtube ErDIj51g9NU %}&lt;/p&gt;
-
-&lt;p&gt;{% youtube 20UkYlHoqEM %}&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>singleton class csharp</title>
-      <link>https://popov1024.github.io/post/2013-11-24-singleton-class-csharp/</link>
-      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/post/2013-11-24-singleton-class-csharp/</guid>
-      <description>&lt;p&gt;По методу Джеффри Рихтера использую такой singleton:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;using System;
-using System.Threading;
-public sealed class singletonclass
-{
-    private static readonly Object SLock = new Object();
-    private static singletonclass _instance;
-
-    private readonly int bar;
-
-    private singletonclass()
-    {
-        bar = 123;
-    }
-
-    public static singletonclass Instance
-    {
-        get
-        {
-            if (_instance != null) return _instance;
-            Monitor.Enter(SLock);
-            var temp = new singletonclass();
-            Interlocked.Exchange(ref _instance, temp);
-            Monitor.Exit(SLock);
-            return _instance;
-        }
-    }
-
-
-    public int foo()
-    {
-        return bar;
-    }
-
-
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

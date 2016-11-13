@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 27 Dec 2015 00:00:00 +0300</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fix wi-fi bcm43xx in Ubuntu</title>
+      <link>https://popov1024.github.io/post/fix-wi-fi-bcm43xx-in-ubuntu/</link>
+      <pubDate>Sun, 27 Dec 2015 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/fix-wi-fi-bcm43xx-in-ubuntu/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;$ sudo apt-get purge bcmwl-kernel-source
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install --reinstall b43-fwcutter firmware-b43-installer
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Reboot&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

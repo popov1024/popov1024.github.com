@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.16" />
 
-  <title>Tags &middot; Andrey Popov</title>
+  <title>Routing &middot; Andrey Popov</title>
 
   
   
@@ -37,7 +37,7 @@
 
   
   
-  <link rel="alternate" type="application/rss+xml" title="Andrey Popov" href="https://popov1024.github.io/tags/index.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Andrey Popov" href="https://popov1024.github.io/tags/routing/index.xml" />
   
 
   
@@ -73,7 +73,7 @@
 
     
     <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://popov1024.github.io/tags/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      <a class="pure-menu-link" href="https://popov1024.github.io/tags/routing/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
     </li>
     
 
@@ -188,43 +188,52 @@
 
 
 <div class="header">
-  <h1>Tags</h1>
+  <h1>Routing</h1>
 </div>
+
 <div class="content">
-  <ul>
+  
+    <article>
+  <header>
+    <h2><a href="https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/">Удобная маршрутизация Mikrotik (RouterOS)</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Feb 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
   
   
-    <li>
-      <a href="1c">1c</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="mikrotik">mikrotik</a>
-      <span>&#40;1&#41;</span>
-    </li>
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/mikrotik">mikrotik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/routing">routing</a>
+    
+  </div>
   
-    <li>
-      <a href="routing">routing</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="teamcity">teamcity</a>
-      <span>&#40;1&#41;</span>
-    </li>
+
+</div>
+
+  </header>
+
+  <p>
+  Задача Необходимо маршрутизировать несколько ip или подсетей по одному правилу. Решение Вариант &ldquo;в лоб&rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&hellip; Благо RouterOS поддерживает работу со списками и маркировку пакетов. И так, создаем список work: /ip firewall address-list add address=10.10.0.0/16 list=work add address=192.168.1.0/24 list=work Делаем пометку workt пакетов согласно данного списка work: /ip firewall mangle add action=mark-routing chain=prerouting dst-address-list=work new-routing-mark=workt Собственно маршрутизация, согласно пометки workt: /ip route add distance=1 gateway=vpn-work routing-mark=workt Теперь достаточно в список work внести новый ip или подсеть, и он будет маршрутизироваться согласно правилам для этого листа.
+  </p>
+
   
-    <li>
-      <a href="ubuntu">ubuntu</a>
-      <span>&#40;1&#41;</span>
-    </li>
+</article>
+
   
-    <li>
-      <a href="wi-fi">wi-fi</a>
-      <span>&#40;1&#41;</span>
-    </li>
-  
-  </ul>
 </div>
 
 </div>

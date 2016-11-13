@@ -196,6 +196,249 @@
   
     <article>
   <header>
+    <h2><a href="https://popov1024.github.io/post/prostoi-vieb-siervier-na-logstash/">Простой веб-сервер на Logstash</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>06 Sep 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  input { http { } } output { stdout { codec =&gt; rubydebug } }
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://popov1024.github.io/post/logstash-input-jbdc-every-seconds/">Logstash input jbdc every seconds</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Aug 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  schedule =&gt; &quot;* * * * * *&quot;
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://popov1024.github.io/post/skachivaniie-zavisimostiei-pakietov-yum/">Скачивание зависимостей пакетов yum</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Jul 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Столкнулся с необходимостью установки докера на целевой хост без доступа в интернет. Пазвернул посредство вагранта CentOS 7 и получил все пакеты (естественно прописав репозиторий докера): $ sudo yum install --downloadonly --downloaddir=docker docker-engine
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://popov1024.github.io/post/govoriashchii-sieliektor-klassa-v-css/">Говорящий селектор класса в CSS!</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jun 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  .titanic {float: none;}
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://popov1024.github.io/post/teamcity-1c-enterprise-8/">TeamCity 1C:Enterprise 8</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 May 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/teamcity">teamcity</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/1c">1c</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Преамбула Для автоматизации сборки конфигураций 1С:Предприятие 8 написал скрипты на PowerShell для TeamCity (TC). Это уже не первый мой опыт: в текущее время использую написанный мною на Ant сценарий, который верой и правдой собирает для версии платформы 8.2. Что сподвигло к изменениям? Прежде всего это выход платформы 8.3.6 в которой появилась возможность подключать конфигурацию в хранилищу. Т.е. позволяет автоматизировать создания сборки с нуля новых проектов. Во-вторых, я организовал теперь все в виде шаблонов для TC с минимальным набором параметров сборки.
+  </p>
+
+  
+  <footer>
+    <a href="https://popov1024.github.io/post/teamcity-1c-enterprise-8/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/">Удобная маршрутизация Mikrotik (RouterOS)</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Feb 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/mikrotik">mikrotik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/routing">routing</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Задача Необходимо маршрутизировать несколько ip или подсетей по одному правилу. Решение Вариант &ldquo;в лоб&rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&hellip; Благо RouterOS поддерживает работу со списками и маркировку пакетов. И так, создаем список work: /ip firewall address-list add address=10.10.0.0/16 list=work add address=192.168.1.0/24 list=work Делаем пометку workt пакетов согласно данного списка work: /ip firewall mangle add action=mark-routing chain=prerouting dst-address-list=work new-routing-mark=workt Собственно маршрутизация, согласно пометки workt: /ip route add distance=1 gateway=vpn-work routing-mark=workt Теперь достаточно в список work внести новый ip или подсеть, и он будет маршрутизироваться согласно правилам для этого листа.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
+    <h2><a href="https://popov1024.github.io/post/fix-wi-fi-bcm43xx-in-ubuntu/">Fix wi-fi bcm43xx in Ubuntu</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>27 Dec 2015, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/ubuntu">ubuntu</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/wi-fi">wi-fi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  $ sudo apt-get purge bcmwl-kernel-source $ sudo apt-get install --reinstall b43-fwcutter firmware-b43-installer Reboot
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://popov1024.github.io/post/2014-08-09-send-sms-from-shell-via-mikrotik/">send sms from shell via mikrotik</a></h2>
 
     <div class="post-meta">
@@ -281,209 +524,6 @@
 </article>
 
   
-    <article>
-  <header>
-    <h2><a href="https://popov1024.github.io/post/2014-02-20-obzor-ghadzhietov-number-3-eliektronnaia-sigharieta-joyetech-ego-cc/">Обзор гаджетов #3 - Электронная сигарета Joyetech eGo-CC</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>20 Feb 2014, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  Уже месяц, как вместо курения обычных сигарет, «парю» электронную eGo-CC. Мысль о курение обычных уже в первый день была какой-то марозматичной Парить электронные гораздо удобней - не нужно никуда ходить, можно курить на рабочем месте, в машине или на ходу сделать пару тяг. Но тут и минус - если в дороге закончилась жижа или сел аккумулятор, то ,собственно говоря, все. Кроме выбора крепости, как в обычных сигаретах, можно выбирать еще и аромат.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://popov1024.github.io/post/2014-02-15-chto-ne-hvataet-v-1c/">Три вещи, которых жутко не хватает в 1С:Предприятие 8</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>15 Feb 2014, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  Нормального scm. Рефакторинг. Регулярных выражений.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://popov1024.github.io/post/2014-01-18-macmini-and-ram-ddr3-1600/">MacMini(Mid 2011)and RAM DDR3 1600</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jan 2014, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  Мой MacMini (середина 2011), хоть и заявленна поддержка DDR3 1333 MHz, прекрасно работает с DDR3 1600 (PC3-12800 CL11 204-Pin SODIMM). Тестировал от вендора Kingston. Кстати, заявленные макисмум 8 Gb тоже не правда. 16 Gb вполне себя работоспособно чувствуют.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://popov1024.github.io/post/2014-01-18-evoliutsiia-dizaina-macpro/">Эволюция дизайна MacPro</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>18 Jan 2014, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  У Mac Pro самая интересная история развития.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://popov1024.github.io/post/2014-01-07-my-ios-life/">My iOS Life</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>07 Jan 2014, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  На выходных занялся разбором и бекапом фоточек. Заметил, что с iPhone накопилось очень много скрншотов, как случайных, так и несущих определенный смысл. Решил, что не нужно пропадать добру и выложил на тумблер в отдельный блог My iOS Life.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://popov1024.github.io/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/">Оптимизация запросов SQL от Попова</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>04 Jan 2014, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  Обсуждали на работе оптимальность запросов и я в очередной раз свормулировал основное правило, которое нигде не пишут: :) Запрос должен получать лишь ту информацию, которая необходима Вытекающие примеры: Select * From ... - это зло. Возвращаемые поля - только те, которые необходимы. Возврашаемые записи - только те, которые необходимы. Select Top 1 field1, field2 ... - это очень правильно, даже если вы уверены, что наложенные ограничения всегда вернут одну запись.
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://popov1024.github.io/post/2014-01-02-backup-stash/">Backup Stash</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>02 Jan 2014, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  java -Dstash.home=/opt/stash-home/ -Dbackup.home=/opt/stash-backup -Dstash.user=user -Dstash.password=password -Dstash.baseUrl=http://example.com:7990 -jar /opt/stash-backup-client-1.1.0/stash-backup-client.jar
-  </p>
-
-  
-</article>
-
-  
 
   
 
@@ -492,7 +532,7 @@
   
   <i class="fa fa-chevron-left"></i>
   
-  <span>&nbsp;1 / 3&nbsp;</span>
+  <span>&nbsp;1 / 4&nbsp;</span>
   
   <a href="https://popov1024.github.io/page/2/"><i class="fa fa-chevron-right"></i></a>
   

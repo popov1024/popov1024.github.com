@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mikrotik on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/mikrotik/</link>
+    <description>Recent content in Mikrotik on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 02 Feb 2016 00:00:00 +0300</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Удобная маршрутизация Mikrotik (RouterOS)</title>
+      <link>https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/udobnaia-marrutizatsiia-mikrotik/</guid>
+      <description>
+
+&lt;h4 id=&#34;задача&#34;&gt;Задача&lt;/h4&gt;
+
+&lt;p&gt;Необходимо маршрутизировать несколько ip или подсетей по одному правилу.&lt;/p&gt;
+
+&lt;h4 id=&#34;решение&#34;&gt;Решение&lt;/h4&gt;
+
+&lt;p&gt;Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Благо RouterOS поддерживает работу со списками и маркировку пакетов.&lt;/p&gt;
+
+&lt;p&gt;И так, создаем список &lt;code&gt;work&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ip firewall address-list
+add address=10.10.0.0/16 list=work
+add address=192.168.1.0/24 list=work
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Делаем пометку &lt;code&gt;workt&lt;/code&gt; пакетов согласно данного списка &lt;code&gt;work&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ip firewall mangle
+add action=mark-routing chain=prerouting dst-address-list=work new-routing-mark=workt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Собственно маршрутизация, согласно пометки &lt;code&gt;workt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/ip route
+add distance=1 gateway=vpn-work routing-mark=workt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Теперь достаточно в список &lt;code&gt;work&lt;/code&gt; внести новый ip или подсеть, и он будет маршрутизироваться согласно правилам для этого листа.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

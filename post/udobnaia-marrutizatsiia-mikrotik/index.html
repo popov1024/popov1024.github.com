@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.16" />
 
-  <title>Tags &middot; Andrey Popov</title>
+  <title>Удобная маршрутизация Mikrotik (RouterOS) &middot; Andrey Popov</title>
 
   
   
@@ -36,8 +36,6 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
   
-  
-  <link rel="alternate" type="application/rss+xml" title="Andrey Popov" href="https://popov1024.github.io/tags/index.xml" />
   
 
   
@@ -71,10 +69,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://popov1024.github.io/tags/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -188,43 +182,107 @@
 
 
 <div class="header">
-  <h1>Tags</h1>
+  <h1>Удобная маршрутизация Mikrotik (RouterOS)</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  <ul>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>02 Feb 2016, 00:00</time>
+  </div>
+
+  
+
+  
+
   
   
-    <li>
-      <a href="1c">1c</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="mikrotik">mikrotik</a>
-      <span>&#40;1&#41;</span>
-    </li>
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/mikrotik">mikrotik</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://popov1024.github.iotags/routing">routing</a>
+    
+  </div>
   
-    <li>
-      <a href="routing">routing</a>
-      <span>&#40;1&#41;</span>
-    </li>
   
-    <li>
-      <a href="teamcity">teamcity</a>
-      <span>&#40;1&#41;</span>
-    </li>
+
+</div>
+
   
-    <li>
-      <a href="ubuntu">ubuntu</a>
-      <span>&#40;1&#41;</span>
-    </li>
+
+<h4 id="задача">Задача</h4>
+
+<p>Необходимо маршрутизировать несколько ip или подсетей по одному правилу.</p>
+
+<h4 id="решение">Решение</h4>
+
+<p>Вариант &ldquo;в лоб&rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&hellip;</p>
+
+<p>Благо RouterOS поддерживает работу со списками и маркировку пакетов.</p>
+
+<p>И так, создаем список <code>work</code>:</p>
+
+<pre><code>/ip firewall address-list
+add address=10.10.0.0/16 list=work
+add address=192.168.1.0/24 list=work
+</code></pre>
+
+<p>Делаем пометку <code>workt</code> пакетов согласно данного списка <code>work</code>:</p>
+
+<pre><code>/ip firewall mangle
+add action=mark-routing chain=prerouting dst-address-list=work new-routing-mark=workt
+</code></pre>
+
+<p>Собственно маршрутизация, согласно пометки <code>workt</code>:</p>
+
+<pre><code>/ip route
+add distance=1 gateway=vpn-work routing-mark=workt
+</code></pre>
+
+<p>Теперь достаточно в список <code>work</code> внести новый ip или подсеть, и он будет маршрутизироваться согласно правилам для этого листа.</p>
+
+
   
-    <li>
-      <a href="wi-fi">wi-fi</a>
-      <span>&#40;1&#41;</span>
-    </li>
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://popov1024.github.io/post/fix-wi-fi-bcm43xx-in-ubuntu/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://popov1024.github.io/post/fix-wi-fi-bcm43xx-in-ubuntu/">Fix wi-fi bcm43xx in Ubuntu</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://popov1024.github.io/post/teamcity-1c-enterprise-8/">TeamCity 1C:Enterprise 8</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://popov1024.github.io/post/teamcity-1c-enterprise-8/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
   
-  </ul>
+
 </div>
 
 </div>
@@ -236,3 +294,4 @@
 
 </body>
 </html>
+
