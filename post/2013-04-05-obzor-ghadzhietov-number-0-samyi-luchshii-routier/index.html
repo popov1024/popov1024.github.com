@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.16" />
+
+  <title>Обзор гаджетов #0 - Самый лучший роутер &middot; Andrey Popov</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://popov.by/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://popov.by/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://popov.by/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+
+  <link rel="shortcut icon" href="https://popov.byimg/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/andrey_popov" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="*" target="_blank"><i class="fa fa-comment fa-fw"></i>GNU social</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://facebook.com/*" target="_blank"><i class="fa fa-facebook-square fa-fw"></i>Facebook</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+*" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="http://weibo.com/*" target="_blank"><i class="fa fa-weibo fa-fw"></i>Weibo</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://*.tumblr.com/" target="_blank"><i class="fa fa-tumblr-square fa-fw"></i>Tumblr</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2016. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Обзор гаджетов #0 - Самый лучший роутер</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <p>Беспорно, для домашнего использования самые лучшии роутеры производит <a href="http://routerboard.com">Mikrotik</a>. В каком еще роутере можно встретить такой спектр функциональных опций за относительно скромный ценник?</p>
+
+<p><img src="https://popov.by/images/allposts/mikrotik.jpg" alt="RB751G-2HnD" title="RB751G-2HnD" /></p>
+
+<p>Обладая Wi-Fi категории N и пятью гигабитными портами, он позволил настроить необходимый мне вариант сети:</p>
+
+<ul>
+<li>Одновременное подключение к двум интернет провайдерам</li>
+<li>Гибкая настройка файревола и QoS</li>
+<li>PPTP и L2TP сервер</li>
+<li>Удаленный доступ по SSH</li>
+</ul>
+
+<p>Если вдруг чего-то из коробки нет, то можно использовать скрипты. Например, использование сервиса DyDNS.org</p>
+
+<pre><code># Set needed variables
+:local username &quot;dydns_username&quot;
+:local password &quot;dydns_password&quot;
+:local hostname &quot;dydns_username.dyndns.org&quot;
+
+:global dyndnsForce
+:global previousIP 
+
+# print some debug info
+:log info (&quot;UpdateDynDNS: username = $username&quot;)
+:log info (&quot;UpdateDynDNS: password = $password&quot;)
+:log info (&quot;UpdateDynDNS: hostname = $hostname&quot;)
+:log info (&quot;UpdateDynDNS: previousIP = $previousIP&quot;)
+
+# get the current IP address from the internet (in case of double-nat)
+/tool fetch mode=http address=&quot;checkip.dyndns.org&quot; src-path=&quot;/&quot; dst-path=&quot;/dyndns.checkip.html&quot;
+:local result [/file get dyndns.checkip.html contents]
+
+# parse the current IP result
+:local resultLen [:len $result]
+:local startLoc [:find $result &quot;: &quot; -1]
+:set startLoc ($startLoc + 2)
+:local endLoc [:find $result &quot;&lt;/body&gt;&quot; -1]
+:local currentIP [:pick $result $startLoc $endLoc]
+:log info &quot;UpdateDynDNS: currentIP = $currentIP&quot;
+
+# Remove the # on next line to force an update every single time - useful for debugging,
+# but you could end up getting blacklisted by DynDNS!
+
+:set dyndnsForce true
+
+# Determine if dyndns update is needed
+# more dyndns updater request details http://www.dyndns.com/developers/specs/syntax.html
+
+:if (($currentIP != $previousIP) || ($dyndnsForce = true)) do={
+   :set dyndnsForce false
+   :set previousIP $currentIP
+   :log info &quot;$currentIP or $previousIP&quot;
+   /tool fetch user=$username password=$password mode=http address=&quot;members.dyndns.org&quot; \
+      src-path=&quot;nic/update?system=dyndns&amp;hostname=$hostname&amp;myip=$currentIP&amp;wildcard=no&quot; \
+      dst-path=&quot;/dyndns.txt&quot;
+   :local result [/file get dyndns.txt contents]
+   :log info (&quot;UpdateDynDNS: Dyndns update needed&quot;)
+   :log info (&quot;UpdateDynDNS: Dyndns Update Result: &quot;.$result)
+   :put (&quot;Dyndns Update Result: &quot;.$result)
+} else={
+   :log info (&quot;UpdateDynDNS: No dyndns update needed&quot;)
+}
+</code></pre>
+
+<p>В <a href="http://wiki.mikrotik.com/wiki/Manual:TOC">Wiki Mikrotik</a> можно найти данный пример и еще множество интерестных вариантов решения проблем, а так же полный справочник по синтаксису команд.</p>
+
+<p>Однозначный вердикт - надо брать. После данного роутера, все остальные роутеры домашнего уровня кажутся тупыми железками.</p>
+
+</div>
+
+</div>
+</div>
+<script src="https://popov.byjs/ui.js"></script>
+
+
+
+
+</body>
+</html>
+
