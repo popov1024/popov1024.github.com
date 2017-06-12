@@ -196,6 +196,35 @@
   
     <article>
   <header>
+    <h2><a href="https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/">1C:Enterprise 8.2 x64 on IIS error</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>03 Mar 2014, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+
+</div>
+
+  </header>
+
+  <p>
+  Если на платформе 1С:Предприятие 8.2 x64 опубликованной на IIS в результате происходит ошибка вида: Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).Описание: Необработанное исключение при выполнении текущего веб-запроса. Изучите трассировку стека для получения дополнительных сведений о данной ошибке и о вызвавшем ее фрагменте кода. Сведения об исключении: System.Web.HttpException: Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:). то она исправляется следующим способом в Web.config: &lt;add name=&quot;1c&quot; path=&quot;*&quot; verb=&quot;*&quot; modules=&quot;IsapiModule&quot; scriptProcessor=&quot;C:\Program Files\1cv82\8.2.18.104\bin\wsisapi.dll&quot; resourceType=&quot;Unspecified&quot; preCondition=&quot;bitness64&quot; /&gt; Ключевым параметром для исправления здесь является preCondition=&quot;bitness64&quot;.
+  </p>
+
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://popov.by/post/2014-02-20-obzor-ghadzhietov-number-3-eliektronnaia-sigharieta-joyetech-ego-cc/">Обзор гаджетов #3 - Электронная сигарета Joyetech eGo-CC</a></h2>
 
     <div class="post-meta">
@@ -449,35 +478,6 @@
 
   <p>
   Собрался с силами и начал осуществлять свою давнюю мечту - сделать сервис сбора балансов с различных сервисов (операторы мобильной связи, интернет провайдеры и пр.) Как-то так сложилось, что под iOS практически нет аналогичных приложений для РБ (по крайней мере на текущий момент). Из технологий использую: Node.js (Express) Bootstrap 3 Heroku MongoDB
-  </p>
-
-  
-</article>
-
-  
-    <article>
-  <header>
-    <h2><a href="https://popov.by/post/2013-12-23-hello-world-via-alfred2/">hello world via Alfred2</a></h2>
-
-    <div class="post-meta">
-
-  <div>
-    <i class="fa fa-calendar fa-fw"></i>
-    <time>23 Dec 2013, 00:00</time>
-  </div>
-
-  
-
-  
-
-  
-
-</div>
-
-  </header>
-
-  <p>
-  Это проверка написания поста с помощью связки Octopress + Alfred 2 + iA Writer
   </p>
 
   

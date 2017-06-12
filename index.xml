@@ -7,8 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ru-Ru</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
-    <lastBuildDate>Tue, 06 Sep 2016 00:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Sun, 11 Jun 2017 22:08:59 +0300</lastBuildDate>
     <atom:link href="https://popov.by/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>docker compose tip0</title>
+      <link>https://popov.by/post/docker-compose-tip0/</link>
+      <pubDate>Sun, 11 Jun 2017 22:08:59 +0300</pubDate>
+      
+      <guid>https://popov.by/post/docker-compose-tip0/</guid>
+      <description>&lt;p&gt;Docker-compose по умолчанию использует в качестве имени проекта имя каталога и создает контейнеры видв &lt;code&gt;folder_bar_1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Изменить имя проекта можно с помощью параметра &lt;code&gt;-p&lt;/code&gt; или, что удобнее всего, указать имя проекта в &lt;code&gt;.env&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;COMPOSE_PROJECT_NAME=foo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Имена контейнеров тогда всегда будут &lt;code&gt;foo_bar_1&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Простой веб-сервер на Logstash</title>
@@ -315,20 +332,6 @@ add distance=1 gateway=vpn-work routing-mark=workt
       <description>&lt;p&gt;&lt;img src=&#34;https://popov.by/images/allposts/macpro-design.jpg&#34; alt=&#34;Mac Pro design&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;У Mac Pro самая интересная история развития.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>My iOS Life</title>
-      <link>https://popov.by/post/2014-01-07-my-ios-life/</link>
-      <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov.by/post/2014-01-07-my-ios-life/</guid>
-      <description>&lt;p&gt;На выходных занялся разбором и бекапом фоточек. Заметил, что с iPhone накопилось очень много скрншотов, как случайных, так и несущих определенный смысл.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://24.media.tumblr.com/d572045390b505d7e7302192f69414e8/tumblr_mz04rbJsAH1tp5hr1o1_1280.png&#34; alt=&#34;youtube end &amp;amp; start&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Решил, что не нужно пропадать добру и выложил на &lt;a href=&#34;http://www.tumblr.com/&#34;&gt;тумблер&lt;/a&gt; в отдельный блог &lt;a href=&#34;http://myioslife.ander.mobi&#34;&gt;My iOS Life&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Andrey Popov</title>
+    <link>https://popov.by/tags/tips/</link>
+    <description>Recent content in Tips on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 11 Jun 2017 22:08:59 +0300</lastBuildDate>
+    <atom:link href="https://popov.by/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>docker compose tip0</title>
+      <link>https://popov.by/post/docker-compose-tip0/</link>
+      <pubDate>Sun, 11 Jun 2017 22:08:59 +0300</pubDate>
+      
+      <guid>https://popov.by/post/docker-compose-tip0/</guid>
+      <description>&lt;p&gt;Docker-compose по умолчанию использует в качестве имени проекта имя каталога и создает контейнеры видв &lt;code&gt;folder_bar_1&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Изменить имя проекта можно с помощью параметра &lt;code&gt;-p&lt;/code&gt; или, что удобнее всего, указать имя проекта в &lt;code&gt;.env&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;COMPOSE_PROJECT_NAME=foo
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Имена контейнеров тогда всегда будут &lt;code&gt;foo_bar_1&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
