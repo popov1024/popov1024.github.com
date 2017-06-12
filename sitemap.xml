@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>https://popov.by/</loc>
-    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://popov.by/post/docker-compose-tip0/</loc>
@@ -189,6 +185,83 @@
   <url>
     <loc>https://popov.by/post/2011-06-27-1c-uid/</loc>
     <lastmod>2011-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/1c/</loc>
+    <lastmod>2016-05-09T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/docker/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/docker-compose/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/mikrotik/</loc>
+    <lastmod>2016-02-02T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/routing/</loc>
+    <lastmod>2016-02-02T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/</loc>
+    <lastmod>2016-05-09T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/teamcity/</loc>
+    <lastmod>2016-05-09T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/tips/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/topics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/ubuntu/</loc>
+    <lastmod>2015-12-27T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/wi-fi/</loc>
+    <lastmod>2015-12-27T00:00:00+03:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
