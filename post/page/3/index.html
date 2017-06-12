@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts</title>
+    
+    
+    
+    
+    
+    <meta name="description" content="Here is a description of my site that will appear in search engine results - W00t!">
+    
+    <meta name="generator" content="Hugo 0.22" />
+    
+    
+    <link rel="canonical" href="https://popov.by/post/">
+    <link rel="stylesheet" type="text/css" href="https://popov.bycss/foundation/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://popov.byhashover/comments.css">
+    <link rel="stylesheet" type="text/css" href="https://popov.bystyles.css">
+  </head>
+  <body>
+    <div id="site-container">
+      <div id="site-header">
+        <header class="small-text-center medium-text-left">
+          <a href="https://popov.by">
+            <span id="site-title">Andrey Popov</span>
+            <br/><span id="site-tagline">An example tagline for my Hugo site</span>
+          </a>
+        </header>
+        <label for="menu-toggle-box"><div id="menu-toggle" class="main-nav no-select"><span><i class="fi-list"></i> MENU</span></div></label>
+<input type="checkbox" id="menu-toggle-box" class="hide"/>
+<nav id="main-nav">
+  <ul class="menu">
+  
+  </ul>
+</nav>
+
+      </div>
+      <div id="main-container" class="row" role="main">
+        
+
+  <main id="post-list" class="row-item small-full medium-two-thirds">
+    
+		<header id="page-header">
+			<h1 id="page-title">Posts</h1>
+		</header>
+		
+    
+    
+      
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-12-23-hello-world-via-alfred2/">
+        <h4>hello world via Alfred2</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-12-23">December 23, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Это проверка написания поста с помощью связки Octopress + Alfred 2 + iA Writer
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-12-23-trudnosti-ponimaniia/">
+        <h4>Трудности понимания</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-12-23">December 23, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          {% youtube ErDIj51g9NU %}
+{% youtube 20UkYlHoqEM %}
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-11-24-singleton-class-csharp/">
+        <h4>singleton class csharp</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-11-24">November 24, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          По методу Джеффри Рихтера использую такой singleton:
+using System; using System.Threading; public sealed class singletonclass { private static readonly Object SLock = new Object(); private static singletonclass _instance; private readonly int bar; private singletonclass() { bar = 123; } public static singletonclass Instance { get { if (_instance != null) return _instance; Monitor.Enter(SLock); var temp = new singletonclass(); Interlocked.Exchange(ref _instance, temp); Monitor.Exit(SLock); return _instance; } } public int foo() { return bar; } }
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-11-22-1c-web-siervis-opriedielieniie-tipa/">
+        <h4>1С Web-Cервис -- Определение типа</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-11-22">November 22, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Вот такая структура типов обычно ставит в тупик из-за недостаточно четкого описание объектной модели типизации XDTO.
+Обычно такая ситуация возникает в таких ситуациях: когда описание делается вложено, а не разбито на отдельные сущности.
+Пример программы формирования объекта данной структуры:
+ws = WSСсылки.WSСсылка.СоздатьWSПрокси(&quot;<a href="http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&quot;">http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&quot;</a>, &quot;COMPLEXWSService&quot;, &quot;COMPLEXWSPort&quot;); ОпределениеТипа = ws.ФабрикаXDTO.Тип(&quot;<a href="http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&quot;">http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&quot;</a>, &quot;CMPLX_DATAType&quot;); Вх = ws.ФабрикаXDTO.Создать(ОпределениеТипа); ТипCMPLX_DATA = ОпределениеТипа.Свойства.Получить(&quot;CMPLX_DATA&quot;).Тип; Вх.CMPLX_DATA = ws.ФабрикаXDTO.Создать(ТипCMPLX_DATA); Вх.CMPLX_DATA.NN = 123; Вх.CMPLX_DATA.DD = ТекущаяДата(); Вх.CMPLX_DATA.TT = ТекущаяДата(); Вх.CMPLX_DATA.SS = ws.ФабрикаXDTO.Создать(ТипCMPLX_DATA.Свойства.Получить(&quot;SS&quot;).Тип, &quot;пример строки&quot;); Вх. <a href="https://popov.by/post/2013-11-22-1c-web-siervis-opriedielieniie-tipa/">[Read more...]</a>
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-11-18-powershell-soap/">
+        <h4>PowerShell SOAP</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-11-18">November 18, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Пример вызова метода Web сервиса посредством SOAP:
+$secpasswd = ConvertTo-SecureString &quot;password&quot; -AsPlainText -Force $mycreds = New-Object System.Management.Automation.PSCredential (&quot;userName&quot;, $secpasswd) $uri = &quot;<a href="http://localhost/IB/ws/example?wsdl&quot;">http://localhost/IB/ws/example?wsdl&quot;</a> try { $service = New-WebServiceProxy -Uri $uri -Credential $mycreds } catch { Write-Error $_ -ErrorAction:&lsquo;SilentlyContinue&rsquo; } if($service -ne $null){ try{ $version = $service.GetVersion() echo $version } catch{ Write-Error $_ -ErrorAction:&lsquo;SilentlyContinue&rsquo; } }  В данном случае использовался вызов Web сервиса 1C:Предприятие 8.2
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-11-14-rdp-koghda-budiet-udobno/">
+        <h4>RDP - когда будет удобно?</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-11-14">November 14, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Мне нравится OS X - все приложения в нем выглядят очень просто, хотя при этом не менее функциональны. Такого достичь очень трудно, но как-то Apple смогла задать правильный дух сторонним разработчикам.
+Единственная моя нужда, которая не удовлетворена нужным приложением - RDP-клиент. Причем их много, все они хорошо делают свою основную задачу, однако хранение самих настроек везде отвратительно, если вообще есть.
+Под Windows я пользуюсь Remote Desktop Connection Manager.
+Однако у него свой формат хранения настроек серверов. <a href="https://popov.by/post/2013-11-14-rdp-koghda-budiet-udobno/">[Read more...]</a>
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-11-13-teamcity-linux/">
+        <h4>TeamCity in Linux</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-11-13">November 13, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Установка TeamCity для Linux освещена не плохо, но как-то смазан процесс создания автостарта данного сервиса. В моем случае интересен только сам сервер (без сборщика-агента) и работает все на CentOS 5.
+Отдельный пользователь в системе:
+sudo /usr/sbin/useradd teamcity sudo passwd teamcity  Содержимое стартового скрипта /etc/init.d/teamcity
+#!/bin/bash # # teamcity TeamCity Continuous Integration Server # # chkconfig: 345 80 30 # description: TeamCity is a continuous Integration Server # processname: teamcity # config: /etc/sysconfig/teamcity # # TeamCity Linux service controller script case &quot;$1&quot; in start) su - teamcity -c &quot;cd /opt/jetbrains/teamcity/bin/ ; . <a href="https://popov.by/post/2013-11-13-teamcity-linux/">[Read more...]</a>
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-09-04-chef-vs-puppet/">
+        <h4>Chef vs Puppet</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-09-04">September 04, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Вопрос дня: ’Chef или Puppet?’
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/">
+        <h4>iOS7 - fail or in fall?</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-06-11">June 11, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Самое долгожданное и всеми обсуждаемое событие на WWDC 2013 стала презентация iOS 7. Хотя новый Mac Pro мог вполне бы стать &ldquo;бомбой&rdquo;, но на него не было сделано такого акцента, да и целевая аудитория слишком мала.
+Первое что сделал Джони Айв - &ldquo;расплющил&rdquo; все и уничтожен скевоморфизм.
+Я люблю скевоморфизм. Полюбил его именно в iOS и OS X. Каждое приложение - было как индивидуальная квартира со своими характерными особенностями, входя в которую хочется изучить каждый закуток, но все же есть что-то общее, что не дает заблудиться. <a href="https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/">[Read more...]</a>
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+    		  <article>
+  
+  <div>
+    <header class="post-list-title">
+      <a href="https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/">
+        <h4>Обзор гаджетов #2 - Арковая клавиатура</h4>
+      </a>
+      <div class="metadata">
+        <i class="fi-clock"></i>
+        <time datetime="2013-04-28">April 28, 2013</time>
+      </div>
+    </header>
+    <div class="post-list-summary">
+      <p>
+        
+        
+          Для своих windows-дел купил себе Microsoft Arc Keyboard.
+Основной критерий при выборе был размер, схожий с Apple Wireless Keyboard, низкий профиль клавиш и беспроводность. Очень понравилось слегка упругое нажатие клавиш.
+Первый минус данной клавиатуры - радио не стандарта Bluetooth. Однако очень порадовало магнитное крепление донгла с нижней части клавиатуры.
+Верхний ряд меня привел в шок. Зачем мне там home, end, pagedown, pageup? Почему не сделать их аналоги с помощью комбинации Fn + arrow? <a href="https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/">[Read more...]</a>
+        
+      </p>
+    </div>
+  </div>
+</article>
+
+    		
+      
+      
+<ul class="menu">
+  <li class=""><a class="pagination" href="https://popov.by/post/page/2/"> &lt;&lt; Previous</a></li>
+  <li class="pagination disabled">3</li>
+  <li class=""><a class="pagination" href="https://popov.by/post/page/4/">Next >></a></li>
+</ul>
+
+
+    
+  </main>
+      <aside class="row-item small-full medium-third right">
+  
+<div class="widget">
+	<a href="https://patreon.com/https://patreon.com/shadow53">
+    <img id="patreon-banner" src="https://s3.amazonaws.com/patreon_public_assets/toolbox/patreon_white.png" alt="Patreon Banner" title="Support me on Patreon!" />
+  </a>
+</div>
+
+
+	
+<div class="widget">
+	<header>
+		<h4><i class="fi-megaphone"></i> <a href="https://popov.bypost/">Recent Posts</a></h4>
+	</header>
+	<ul>
+		
+		<li><a href="https://popov.by/post/docker-compose-tip0/">docker compose tip0</a></li>
+		
+		<li><a href="https://popov.by/post/prostoi-vieb-siervier-na-logstash/">Простой веб-сервер на Logstash</a></li>
+		
+		<li><a href="https://popov.by/post/logstash-input-jbdc-every-seconds/">Logstash input jbdc every seconds</a></li>
+		
+		<li><a href="https://popov.by/post/skachivaniie-zavisimostiei-pakietov-yum/">Скачивание зависимостей пакетов yum</a></li>
+		
+		<li><a href="https://popov.by/post/govoriashchii-sieliektor-klassa-v-css/">Говорящий селектор класса в CSS!</a></li>
+		
+		<li><a href="https://popov.by/post/teamcity-1c-enterprise-8/">TeamCity 1C:Enterprise 8</a></li>
+		
+		<li><a href="https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/">Удобная маршрутизация Mikrotik (RouterOS)</a></li>
+		
+		<li><a href="https://popov.by/post/fix-wi-fi-bcm43xx-in-ubuntu/">Fix wi-fi bcm43xx in Ubuntu</a></li>
+		
+		<li><a href="https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/">send sms from shell via mikrotik</a></li>
+		
+		<li><a href="https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/">1C WSDL and fields order</a></li>
+		
+	</ul>
+</div>
+
+
+  
+
+	
+
+
+
+	
+
+
+<div class="widget">
+	<header>
+		<h4><i class="fi-pricetag-multiple"></i> <a href="https://popov.bytags/">Tags</a></h4>
+	</header>
+	<div>
+		
+			<a class="button" href="https://popov.bytags/1c" title="1c" style="font-size: 12px;">
+				1c (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/docker" title="docker" style="font-size: 12px;">
+				docker (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/docker-compose" title="docker-compose" style="font-size: 12px;">
+				docker-compose (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/mikrotik" title="mikrotik" style="font-size: 12px;">
+				mikrotik (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/routing" title="routing" style="font-size: 12px;">
+				routing (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/teamcity" title="teamcity" style="font-size: 12px;">
+				teamcity (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/tips" title="tips" style="font-size: 12px;">
+				tips (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/ubuntu" title="ubuntu" style="font-size: 12px;">
+				ubuntu (1)
+			</a>
+		
+			<a class="button" href="https://popov.bytags/wi-fi" title="wi-fi" style="font-size: 12px;">
+				wi-fi (1)
+			</a>
+		
+	</div>
+</div>
+
+
+
+
+</aside>
+
+    </div>
+    <footer class="row">
+      <div class="small-full medium-half row-item small-text-center medium-text-left"><small>&copy; 2017 Andrey Popov.</small></div>
+      <div class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
+        
+        <a href="https://facebook.com/popov1024">
+          <i class="fi-social-facebook"></i>
+        </a>
+        <a href="https://github.com/popov1024">
+          <i class="fi-social-github"></i>
+        </a>
+        <a href="https://plus.google.com/AndreyPopov1024">
+          <i class="fi-social-google-plus"></i>
+        </a>
+        
+        
+        
+        
+        
+        
+        <a href="https://popov1024.tumblr.com/">
+          <i class="fi-social-tumblr"></i>
+        </a>
+        <a href="https://twitter.com/andrey_popov">
+          <i class="fi-social-twitter"></i>
+        </a>
+        
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://popov.by/post/docker-compose-tip0/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/prostoi-vieb-siervier-na-logstash/</loc>
+    <lastmod>2016-09-06T00:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/logstash-input-jbdc-every-seconds/</loc>
+    <lastmod>2016-08-08T00:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/skachivaniie-zavisimostiei-pakietov-yum/</loc>
+    <lastmod>2016-07-03T00:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/govoriashchii-sieliektor-klassa-v-css/</loc>
+    <lastmod>2016-06-01T00:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/teamcity-1c-enterprise-8/</loc>
+    <lastmod>2016-05-09T00:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/</loc>
+    <lastmod>2016-02-02T00:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/fix-wi-fi-bcm43xx-in-ubuntu/</loc>
+    <lastmod>2015-12-27T00:00:00+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/</loc>
+    <lastmod>2014-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/</loc>
+    <lastmod>2014-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/</loc>
+    <lastmod>2014-03-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-02-20-obzor-ghadzhietov-number-3-eliektronnaia-sigharieta-joyetech-ego-cc/</loc>
+    <lastmod>2014-02-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-02-15-chto-ne-hvataet-v-1c/</loc>
+    <lastmod>2014-02-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-01-18-macmini-and-ram-ddr3-1600/</loc>
+    <lastmod>2014-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-01-18-evoliutsiia-dizaina-macpro/</loc>
+    <lastmod>2014-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-01-07-my-ios-life/</loc>
+    <lastmod>2014-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/</loc>
+    <lastmod>2014-01-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-01-02-backup-stash/</loc>
+    <lastmod>2014-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2014-01-02-backup-teamcity/</loc>
+    <lastmod>2014-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-12-30-total-balancer-start/</loc>
+    <lastmod>2013-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-12-23-hello-world-via-alfred2/</loc>
+    <lastmod>2013-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-12-23-trudnosti-ponimaniia/</loc>
+    <lastmod>2013-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-11-24-singleton-class-csharp/</loc>
+    <lastmod>2013-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-11-22-1c-web-siervis-opriedielieniie-tipa/</loc>
+    <lastmod>2013-11-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-11-18-powershell-soap/</loc>
+    <lastmod>2013-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-11-14-rdp-koghda-budiet-udobno/</loc>
+    <lastmod>2013-11-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-11-13-teamcity-linux/</loc>
+    <lastmod>2013-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-09-04-chef-vs-puppet/</loc>
+    <lastmod>2013-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/</loc>
+    <lastmod>2013-06-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/</loc>
+    <lastmod>2013-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-04-22-obzor-ghadzhietov-number-1-eye-fi/</loc>
+    <lastmod>2013-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-04-05-obzor-ghadzhietov-number-0-samyi-luchshii-routier/</loc>
+    <lastmod>2013-04-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2013-03-16-1c-ant-jenkins/</loc>
+    <lastmod>2013-03-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2012-01-21-zaghruzka-kursov-valiut-nbrb/</loc>
+    <lastmod>2012-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2011-08-19-number-of-pegs/</loc>
+    <lastmod>2011-08-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2011-07-29-1c-error-filename-pos19/</loc>
+    <lastmod>2011-07-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/2011-06-27-1c-uid/</loc>
+    <lastmod>2011-06-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/1c/</loc>
+    <lastmod>2016-05-09T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/docker/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/docker-compose/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/mikrotik/</loc>
+    <lastmod>2016-02-02T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/post/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/routing/</loc>
+    <lastmod>2016-02-02T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/</loc>
+    <lastmod>2016-05-09T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/teamcity/</loc>
+    <lastmod>2016-05-09T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/tips/</loc>
+    <lastmod>2017-06-11T22:08:59+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/topics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/ubuntu/</loc>
+    <lastmod>2015-12-27T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/wi-fi/</loc>
+    <lastmod>2015-12-27T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
