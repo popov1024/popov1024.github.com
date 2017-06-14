@@ -1,0 +1,29 @@
++++
+date = "2017-06-14T22:51:45+03:00"
+description = ""
+disable_comments = false
+draft = false
+hide_authorbox = false
+tags = ["docker", "docker-compose", "tips"]
+thumbnail = ""
+title = "docker-compose pointer tip1"
+
++++
+
+Для устранения в `docker-compose.yml` частого повторения однотианых блоков, можно использовать указатели (в примере это `&defaultloggong`):
+
+```
+version: '2'
+
+services:
+    foo:
+        image: alpine
+        logging: &defaultloggong
+            driver: json-file
+            options:
+                max-size: "10m"
+                max-file: "5"
+    bar:
+        image: alpine
+        logging: *defaultloggong
+```
