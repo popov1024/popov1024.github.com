@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Скачивание зависимостей пакетов yum</title>
+    <title>docker-compose pointer tip1</title>
     
     
     
     
     
-    <meta name="description" content="Столкнулся с необходимостью установки докера на целевой хост без доступа в интернет.
-Пазвернул посредство вагранта CentOS 7 и получил все пакеты (естественно прописав репозиторий докера):
-$ sudo yum install --downloadonly --downloaddir=docker docker-engine  ">
+    <meta name="description" content="Для устранения в docker-compose.yml частого повторения однотианых блоков, можно использовать указатели (в примере это &amp;defaultlogging):
+version: &#39;2&#39; services: foo: image: alpine logging: &amp;defaultlogging driver: json-file options: max-size: &quot;10m&quot; max-file: &quot;5&quot; bar: image: alpine logging: *defaultloggong  ">
     
     <meta name="generator" content="Hugo 0.22" />
     
     
-    <link rel="canonical" href="https://popov.by/post/skachivaniie-zavisimostiei-pakietov-yum/">
+      <meta name="keywords" content="docker,docker-compose,tips">
+    
+    <link rel="canonical" href="https://popov.by/post/docker-compose-pointer-tip1/">
     <link rel="stylesheet" type="text/css" href="https://popov.by/css/foundation/foundation-icons.css">
     <link rel="stylesheet" type="text/css" href="https://popov.by/hashover/comments.css">
     <link rel="stylesheet" type="text/css" href="https://popov.by/styles.css">
@@ -57,13 +58,13 @@ $ sudo yum install --downloadonly --downloaddir=docker docker-engine  ">
   <main class="row-item small-full medium-two-thirds">
     <article id="post-article">
       <header id="page-header">
-        <h1>Скачивание зависимостей пакетов yum</h1>
+        <h1>docker-compose pointer tip1</h1>
         
   			<p id="post-metadata" class="row">
           
           <span class="row-item">
     				<i class="fi-clock"></i>
-    				<time datetime="2016-07-03">July 03, 2016</time>
+    				<time datetime="2017-06-14">June 14, 2017</time>
           </span>
   				
   				
@@ -76,15 +77,38 @@ $ sudo yum install --downloadonly --downloaddir=docker docker-engine  ">
       <div id="post-content">
         
         
-  			<p>Столкнулся с необходимостью установки докера на целевой хост без доступа в интернет.</p>
+  			<p>Для устранения в <code>docker-compose.yml</code> частого повторения однотианых блоков, можно использовать указатели (в примере это <code>&amp;defaultlogging</code>):</p>
 
-<p>Пазвернул посредство вагранта CentOS 7 и получил все пакеты (естественно прописав репозиторий докера):</p>
+<pre><code>version: '2'
 
-<pre><code>$ sudo yum install --downloadonly --downloaddir=docker docker-engine
+services:
+    foo:
+        image: alpine
+        logging: &amp;defaultlogging
+            driver: json-file
+            options:
+                max-size: &quot;10m&quot;
+                max-file: &quot;5&quot;
+    bar:
+        image: alpine
+        logging: *defaultloggong
 </code></pre>
 
   		</div>
       
+<div id="post-tags">
+	<ul class="menu">
+    <li class="row-item"><i class="fi-pricetag-multiple"></i>&nbsp;&nbsp;</li>
+		
+		<li><a class="row-item button" href="https://popov.by/tags/docker/" rel="tag">docker</a></li>
+		
+		<li><a class="row-item button" href="https://popov.by/tags/docker-compose/" rel="tag">docker-compose</a></li>
+		
+		<li><a class="row-item button" href="https://popov.by/tags/tips/" rel="tag">tips</a></li>
+		
+	</ul>
+</div>
+
 
     </article>
     
