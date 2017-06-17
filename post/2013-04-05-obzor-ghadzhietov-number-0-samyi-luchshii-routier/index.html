@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обзор гаджетов #0 - Самый лучший роутер</title>
+    
+    
+    
+    
+    
+    <meta name="description" content="Беспорно, для домашнего использования самые лучшии роутеры производит Mikrotik. В каком еще роутере можно встретить такой спектр функциональных опций за относительно скромный ценник?
+Обладая Wi-Fi категории N и пятью гигабитными портами, он позволил настроить необходимый мне вариант сети:
+ Одновременное подключение к двум интернет провайдерам Гибкая настройка файревола и QoS PPTP и L2TP сервер Удаленный доступ по SSH  Если вдруг чего-то из коробки нет, то можно использовать скрипты. Например, использование сервиса DyDNS.">
+    
+    <meta name="generator" content="Hugo 0.22" />
+    
+    
+    <link rel="canonical" href="https://popov.by/post/2013-04-05-obzor-ghadzhietov-number-0-samyi-luchshii-routier/">
+    <link rel="stylesheet" type="text/css" href="https://popov.by/css/foundation/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://popov.by/hashover/comments.css">
+    <link rel="stylesheet" type="text/css" href="https://popov.by/styles.css">
+  </head>
+  <body>
+    <div id="site-container">
+      <div id="site-header">
+        <header class="small-text-center medium-text-left">
+          <a href="https://popov.by/">
+            <span id="site-title">Andrey Popov</span>
+            <br/><span id="site-tagline">The World is null</span>
+          </a>
+        </header>
+        <label for="menu-toggle-box"><div id="menu-toggle" class="main-nav no-select"><span><i class="fi-list"></i> MENU</span></div></label>
+<input type="checkbox" id="menu-toggle-box" class="hide"/>
+<nav id="main-nav">
+  <ul class="menu">
+  
+
+
+  <li class="no-select">
+      <input type="checkbox" id="nav-wtf" class="hide"/>
+      
+        <a class="main-nav button" href="https://popov.by/page/wtf/">
+          WTF
+        </a>
+      
+  </li>
+
+
+  </ul>
+</nav>
+
+      </div>
+      <div id="main-container" class="row" role="main">
+        
+
+  <main class="row-item small-full medium-two-thirds">
+    <article id="post-article">
+      <header id="page-header">
+        <h1>Обзор гаджетов #0 - Самый лучший роутер</h1>
+        
+  			<p id="post-metadata" class="row">
+          
+          <span class="row-item">
+    				<i class="fi-clock"></i>
+    				<time datetime="2013-04-05">April 05, 2013</time>
+          </span>
+  				
+  				
+  				<span class="row-item">
+  					<i class="fi-folder"></i>
+  					<a href="https://popov.by/categories/mikrotik" rel="category">mikrotik</a>, <a href="https://popov.by/categories/router" rel="category">router</a>, <a href="https://popov.by/categories/review" rel="category">review</a>
+          </span>
+  				
+          
+          <span class="row-item">Estimated reading time: ~2 minutes</span>
+          
+  			</p>
+  			
+      </header>
+      <div id="post-content">
+        
+        
+  			<p>Беспорно, для домашнего использования самые лучшии роутеры производит <a href="http://routerboard.com">Mikrotik</a>. В каком еще роутере можно встретить такой спектр функциональных опций за относительно скромный ценник?</p>
+
+<p><img src="https://popov.by/images/allposts/mikrotik.jpg" alt="RB751G-2HnD" title="RB751G-2HnD" /></p>
+
+<p>Обладая Wi-Fi категории N и пятью гигабитными портами, он позволил настроить необходимый мне вариант сети:</p>
+
+<ul>
+<li>Одновременное подключение к двум интернет провайдерам</li>
+<li>Гибкая настройка файревола и QoS</li>
+<li>PPTP и L2TP сервер</li>
+<li>Удаленный доступ по SSH</li>
+</ul>
+
+<p>Если вдруг чего-то из коробки нет, то можно использовать скрипты. Например, использование сервиса DyDNS.org</p>
+
+<pre><code># Set needed variables
+:local username &quot;dydns_username&quot;
+:local password &quot;dydns_password&quot;
+:local hostname &quot;dydns_username.dyndns.org&quot;
+
+:global dyndnsForce
+:global previousIP 
+
+# print some debug info
+:log info (&quot;UpdateDynDNS: username = $username&quot;)
+:log info (&quot;UpdateDynDNS: password = $password&quot;)
+:log info (&quot;UpdateDynDNS: hostname = $hostname&quot;)
+:log info (&quot;UpdateDynDNS: previousIP = $previousIP&quot;)
+
+# get the current IP address from the internet (in case of double-nat)
+/tool fetch mode=http address=&quot;checkip.dyndns.org&quot; src-path=&quot;/&quot; dst-path=&quot;/dyndns.checkip.html&quot;
+:local result [/file get dyndns.checkip.html contents]
+
+# parse the current IP result
+:local resultLen [:len $result]
+:local startLoc [:find $result &quot;: &quot; -1]
+:set startLoc ($startLoc + 2)
+:local endLoc [:find $result &quot;&lt;/body&gt;&quot; -1]
+:local currentIP [:pick $result $startLoc $endLoc]
+:log info &quot;UpdateDynDNS: currentIP = $currentIP&quot;
+
+# Remove the # on next line to force an update every single time - useful for debugging,
+# but you could end up getting blacklisted by DynDNS!
+
+:set dyndnsForce true
+
+# Determine if dyndns update is needed
+# more dyndns updater request details http://www.dyndns.com/developers/specs/syntax.html
+
+:if (($currentIP != $previousIP) || ($dyndnsForce = true)) do={
+   :set dyndnsForce false
+   :set previousIP $currentIP
+   :log info &quot;$currentIP or $previousIP&quot;
+   /tool fetch user=$username password=$password mode=http address=&quot;members.dyndns.org&quot; \
+      src-path=&quot;nic/update?system=dyndns&amp;hostname=$hostname&amp;myip=$currentIP&amp;wildcard=no&quot; \
+      dst-path=&quot;/dyndns.txt&quot;
+   :local result [/file get dyndns.txt contents]
+   :log info (&quot;UpdateDynDNS: Dyndns update needed&quot;)
+   :log info (&quot;UpdateDynDNS: Dyndns Update Result: &quot;.$result)
+   :put (&quot;Dyndns Update Result: &quot;.$result)
+} else={
+   :log info (&quot;UpdateDynDNS: No dyndns update needed&quot;)
+}
+</code></pre>
+
+<p>В <a href="http://wiki.mikrotik.com/wiki/Manual:TOC">Wiki Mikrotik</a> можно найти данный пример и еще множество интерестных вариантов решения проблем, а так же полный справочник по синтаксису команд.</p>
+
+<p>Однозначный вердикт - надо брать. После данного роутера, все остальные роутеры домашнего уровня кажутся тупыми железками.</p>
+
+  		</div>
+      
+
+    </article>
+    
+
+
+
+
+  	
+
+  	
+<div class="post-comments">
+  
+    
+  
+</div>
+
+
+  </main>
+      <aside class="row-item small-full medium-third right">
+  
+
+	
+<div class="widget">
+	<header>
+		<h4><i class="fi-megaphone"></i> <a href="https://popov.by/post/">Recent Posts</a></h4>
+	</header>
+	<ul>
+		
+		<li><a href="https://popov.by/post/docker-compose-pointer-tip1/">docker-compose pointer tip1</a></li>
+		
+		<li><a href="https://popov.by/post/docker-compose-tip0/">docker compose tip0</a></li>
+		
+		<li><a href="https://popov.by/post/prostoi-vieb-siervier-na-logstash/">Простой веб-сервер на Logstash</a></li>
+		
+		<li><a href="https://popov.by/post/logstash-input-jbdc-every-seconds/">Logstash input jbdc every seconds</a></li>
+		
+		<li><a href="https://popov.by/post/skachivaniie-zavisimostiei-pakietov-yum/">Скачивание зависимостей пакетов yum</a></li>
+		
+		<li><a href="https://popov.by/post/govoriashchii-sieliektor-klassa-v-css/">Говорящий селектор класса в CSS!</a></li>
+		
+		<li><a href="https://popov.by/post/teamcity-1c-enterprise-8/">TeamCity 1C:Enterprise 8</a></li>
+		
+		<li><a href="https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/">Удобная маршрутизация Mikrotik (RouterOS)</a></li>
+		
+		<li><a href="https://popov.by/post/fix-wi-fi-bcm43xx-in-ubuntu/">Fix wi-fi bcm43xx in Ubuntu</a></li>
+		
+		<li><a href="https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/">send sms from shell via mikrotik</a></li>
+		
+	</ul>
+</div>
+
+
+  
+
+	
+
+
+
+	
+
+
+<div class="widget">
+	<header>
+		<h4><i class="fi-pricetag-multiple"></i> <a href="https://popov.by/tags/">Tags</a></h4>
+	</header>
+	<div>
+		
+			<a class="button" href="https://popov.by/tags/docker" title="docker" style="font-size: 12px;">
+				docker (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/docker-compose" title="docker-compose" style="font-size: 12px;">
+				docker-compose (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/mikrotik" title="mikrotik" style="font-size: 12px;">
+				mikrotik (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/tips" title="tips" style="font-size: 12px;">
+				tips (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/1c" title="1c" style="font-size: 12px;">
+				1c (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/routing" title="routing" style="font-size: 12px;">
+				routing (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/sms" title="sms" style="font-size: 12px;">
+				sms (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/teamcity" title="teamcity" style="font-size: 12px;">
+				teamcity (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/ubuntu" title="ubuntu" style="font-size: 12px;">
+				ubuntu (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/wi-fi" title="wi-fi" style="font-size: 12px;">
+				wi-fi (1)
+			</a>
+		
+	</div>
+</div>
+
+
+
+
+</aside>
+
+    </div>
+    <footer class="row">
+      <div class="small-full medium-half row-item small-text-center medium-text-left"><small>&copy; 2017 Andrey Popov.</small></div>
+      <div class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
+        
+        <a href="https://facebook.com/popov1024">
+          <i class="fi-social-facebook"></i>
+        </a>
+        <a href="https://github.com/popov1024">
+          <i class="fi-social-github"></i>
+        </a>
+        <a href="https://plus.google.com/AndreyPopov1024">
+          <i class="fi-social-google-plus"></i>
+        </a>
+        
+        
+        
+        
+        
+        
+        <a href="https://popov1024.tumblr.com/">
+          <i class="fi-social-tumblr"></i>
+        </a>
+        <a href="https://twitter.com/andrey_popov">
+          <i class="fi-social-twitter"></i>
+        </a>
+        
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

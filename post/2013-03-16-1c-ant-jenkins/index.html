@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1С:Предприятие &#43; Ant &#43; jenkins</title>
+    
+    
+    
+    
+    
+    <meta name="description" content="1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно. Мои проекты имеют следующий жизненный цикл:
+ Внесение изменений в код согласно Jira Выпуск тестовой сборки Исправление ошибок по необходимости Выпуск релиза (проверка конфигурации, формирование cf &#43; cfu, формирование отчета по измененным объектам хранилища конфигурации) Изменение версии в хранилище конфигурации  Для выпуска релиза мной разработан build.xml для Apache Ant
+&lt;project name=&quot;kisnpo&quot; default=&quot;build&quot;&gt; &lt;description&gt;kisnpo build&lt;/description&gt; &lt;property environment=&quot;env&quot;/&gt; &lt;property name=&quot;rep&quot; value=&quot;tcp://share\myproject\&quot;/&gt; &lt;property name=&quot;replogin&quot; value=&quot;login&quot;/&gt; &lt;property name=&quot;reppassword&quot; value=&quot;password&quot;/&gt; &lt;property name=&quot;ibname&quot; value=&quot;c:\ib\myproject&quot;/&gt; &lt;property name=&quot;ib&quot; value=&quot;/F${ibname}&quot;/&gt; &lt;property name=&quot;iblogin&quot; value=&quot;login&quot;/&gt; &lt;property name=&quot;ibpassword&quot; value=&quot;password&quot;/&gt; &lt;property name=&quot;connectionstring&quot; value=&quot;Usr=&quot;${iblogin}&quot;;Pwd=&quot;${ibpassword}&quot;;File=&quot;${ibname}&quot;;&quot;/&gt; &lt;property name=&quot;1cbin&quot; location=&quot;C:\Program Files (x86)\1cv81\bin\1cv8.">
+    
+    <meta name="generator" content="Hugo 0.22" />
+    
+    
+    <link rel="canonical" href="https://popov.by/post/2013-03-16-1c-ant-jenkins/">
+    <link rel="stylesheet" type="text/css" href="https://popov.by/css/foundation/foundation-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://popov.by/hashover/comments.css">
+    <link rel="stylesheet" type="text/css" href="https://popov.by/styles.css">
+  </head>
+  <body>
+    <div id="site-container">
+      <div id="site-header">
+        <header class="small-text-center medium-text-left">
+          <a href="https://popov.by/">
+            <span id="site-title">Andrey Popov</span>
+            <br/><span id="site-tagline">The World is null</span>
+          </a>
+        </header>
+        <label for="menu-toggle-box"><div id="menu-toggle" class="main-nav no-select"><span><i class="fi-list"></i> MENU</span></div></label>
+<input type="checkbox" id="menu-toggle-box" class="hide"/>
+<nav id="main-nav">
+  <ul class="menu">
+  
+
+
+  <li class="no-select">
+      <input type="checkbox" id="nav-wtf" class="hide"/>
+      
+        <a class="main-nav button" href="https://popov.by/page/wtf/">
+          WTF
+        </a>
+      
+  </li>
+
+
+  </ul>
+</nav>
+
+      </div>
+      <div id="main-container" class="row" role="main">
+        
+
+  <main class="row-item small-full medium-two-thirds">
+    <article id="post-article">
+      <header id="page-header">
+        <h1>1С:Предприятие &#43; Ant &#43; jenkins</h1>
+        
+  			<p id="post-metadata" class="row">
+          
+          <span class="row-item">
+    				<i class="fi-clock"></i>
+    				<time datetime="2013-03-16">March 16, 2013</time>
+          </span>
+  				
+  				
+  				<span class="row-item">
+  					<i class="fi-folder"></i>
+  					<a href="https://popov.by/categories/1c" rel="category">1C</a>, <a href="https://popov.by/categories/ant" rel="category">Ant</a>, <a href="https://popov.by/categories/jenkins" rel="category">jenkins</a>
+          </span>
+  				
+          
+          <span class="row-item">Estimated reading time: ~3 minutes</span>
+          
+  			</p>
+  			
+      </header>
+      <div id="post-content">
+        
+        
+  			<p>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.
+Мои проекты имеют следующий жизненный цикл:</p>
+
+<ol>
+<li>Внесение изменений в код согласно Jira</li>
+<li>Выпуск тестовой сборки</li>
+<li>Исправление ошибок по необходимости</li>
+<li>Выпуск релиза (проверка конфигурации, формирование cf + cfu, формирование отчета по измененным объектам хранилища конфигурации)</li>
+<li>Изменение версии в хранилище конфигурации</li>
+</ol>
+
+<p>Для выпуска релиза мной разработан build.xml для Apache Ant</p>
+
+<pre><code>&lt;project name=&quot;kisnpo&quot; default=&quot;build&quot;&gt;
+	&lt;description&gt;kisnpo build&lt;/description&gt;
+	&lt;property environment=&quot;env&quot;/&gt;
+	&lt;property name=&quot;rep&quot; value=&quot;tcp://share\myproject\&quot;/&gt;
+	&lt;property name=&quot;replogin&quot; value=&quot;login&quot;/&gt;
+	&lt;property name=&quot;reppassword&quot; value=&quot;password&quot;/&gt;
+	&lt;property name=&quot;ibname&quot; value=&quot;c:\ib\myproject&quot;/&gt;
+	&lt;property name=&quot;ib&quot; value=&quot;/F${ibname}&quot;/&gt;
+	&lt;property name=&quot;iblogin&quot; value=&quot;login&quot;/&gt;
+	&lt;property name=&quot;ibpassword&quot; value=&quot;password&quot;/&gt;
+	&lt;property name=&quot;connectionstring&quot; value=&quot;Usr=&quot;${iblogin}&quot;;Pwd=&quot;${ibpassword}&quot;;File=&quot;${ibname}&quot;;&quot;/&gt;
+	&lt;property name=&quot;1cbin&quot; location=&quot;C:\Program Files (x86)\1cv81\bin\1cv8.exe&quot;/&gt;
+	&lt;property name=&quot;1cbincom&quot; value=&quot;V81.COMConnector&quot;/&gt;
+	&lt;property name=&quot;builds&quot; location=&quot;${env.WORKSPACE}&quot;/&gt;
+	&lt;property name=&quot;publishdebug&quot; location=&quot;\\ftp\project-test&quot;/&gt;
+	&lt;property name=&quot;publish&quot; location=&quot;\\ftp\project&quot;/&gt;
+	&lt;property name=&quot;NBegin&quot; value=&quot;1&quot;/&gt;
+	&lt;property name=&quot;NEnd&quot; value=&quot;1&quot;/&gt;
+	&lt;target name=&quot;init&quot; depends=&quot;build-version&quot;&gt;
+		&lt;fail if=&quot;version_present&quot; message=&quot;Version ${version} is builed&quot;/&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;build-version&quot; unless=&quot;version&quot;&gt;
+		&lt;exec executable=&quot;powershell.exe&quot; output=&quot;.version&quot; failonerror=&quot;true&quot;&gt;
+			&lt;arg value=&quot;$c=new-object -comobject \&quot;${1cbincom}\&quot;;&quot;/&gt;
+			&lt;arg value=&quot;$b=$c.Connect(\&quot;${connectionstring}\&quot;);&quot;/&gt;
+			&lt;arg value=&quot;$medata=[System.__ComObject].invokemember(\&quot;Metadata\&quot;,[System.Reflection.BindingFlags]::GetProperty,$null,$b,$null);&quot;/&gt;
+			&lt;arg value=&quot;[String]$buildversion = [System.__ComObject].invokemember(\&quot;Version\&quot;,[System.Reflection.BindingFlags]::GetProperty,$null,$medata ,$null);&quot;/&gt;
+			&lt;arg value=&quot;echo $buildversion;&quot;/&gt;
+			&lt;arg value=&quot;$rb=[System.Runtime.Interopservices.Marshal]::ReleaseComObject($b);&quot;/&gt;
+			&lt;arg value=&quot;$rc=[System.Runtime.Interopservices.Marshal]::ReleaseComObject($c)&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;loadfile property=&quot;version&quot; srcFile=&quot;.version&quot;&gt;
+		&lt;filterchain&gt;
+			&lt;striplinebreaks/&gt;
+		&lt;/filterchain&gt;
+		&lt;/loadfile&gt;
+		&lt;available filepath=&quot;${builds}&quot; file=&quot;${version}&quot; type=&quot;dir&quot; property=&quot;version_present&quot;/&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;clean&quot;&gt;
+		&lt;delete file=&quot;.version&quot;/&gt;
+		&lt;delete file=&quot;.checkerror&quot;/&gt;
+		&lt;delete file=&quot;.updatescf&quot;/&gt;
+		&lt;delete file=&quot;.resultcheck&quot;/&gt;
+		&lt;delete file=&quot;.report&quot;/&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;update&quot;&gt;
+		&lt;exec executable=&quot;${1cbin}&quot; failonerror=&quot;true&quot;&gt;
+			&lt;arg value=&quot;CONFIG&quot;/&gt;
+			&lt;arg value=&quot;${ib}&quot;/&gt;
+			&lt;arg value=&quot;/N${iblogin}&quot;/&gt;
+			&lt;arg value=&quot;/P${ibpassword}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryF${rep}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryN${replogin}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryP${reppassword}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryUpdateCfg&quot;/&gt;
+			&lt;arg value=&quot;-force /UpdateDBCfg&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;check&quot; depends=&quot;update&quot;&gt;
+		&lt;exec executable=&quot;${1cbin}&quot; output=&quot;.resultcheck&quot; failonerror=&quot;true&quot;&gt;
+			&lt;arg value=&quot;CONFIG&quot;/&gt;
+			&lt;arg value=&quot;${ib}&quot;/&gt;
+			&lt;arg value=&quot;/N${iblogin}&quot;/&gt;
+			&lt;arg value=&quot;/P${ibpassword}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryF${rep}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryN${replogin}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryP${reppassword}&quot;/&gt;
+			&lt;arg value=&quot;/CheckConfig&quot;/&gt;
+			&lt;arg value=&quot;-IncorrectReferences&quot;/&gt;
+			&lt;arg value=&quot;-Client&quot;/&gt;
+			&lt;arg value=&quot;-ClientServer&quot;/&gt;
+			&lt;arg value=&quot;-ExternalConnectionServer&quot;/&gt;
+			&lt;arg value=&quot;-ExternalConnection&quot;/&gt;
+			&lt;arg value=&quot;-Server&quot;/&gt;
+			&lt;arg value=&quot;-DistributiveModules&quot;/&gt;
+			&lt;arg value=&quot;-ConfigLogicalIntegrity&quot;/&gt;
+			&lt;arg value=&quot;/DumpResult .checkerror&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;loadfile property=&quot;checkerror&quot; srcFile=&quot;.checkerror&quot; encoding=&quot;utf-8&quot;&gt;
+			&lt;filterchain&gt;
+				&lt;tokenfilter&gt;
+					&lt;containsregex pattern=&quot;^[^0-9\-]+(0)$&quot;/&gt;
+				&lt;/tokenfilter&gt;
+			&lt;/filterchain&gt;
+		&lt;/loadfile&gt;
+		&lt;fail unless=&quot;checkerror&quot;/&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;build&quot; depends=&quot;check,init&quot; unless=&quot;version_present&quot;&gt;
+		&lt;exec executable=&quot;cmd.exe&quot;&gt;
+			&lt;arg value=&quot;/c&quot;/&gt;
+			&lt;arg value=&quot;rd&quot;/&gt;
+			&lt;arg value=&quot;.last&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;echo message=&quot;Build version is ${version}&quot;/&gt;
+		&lt;exec executable=&quot;powershell.exe&quot; output=&quot;.updatescf&quot; failonerror=&quot;true&quot;&gt;
+			&lt;arg value=&quot;[String]$p=\&quot;\&quot;;&quot;/&gt;
+			&lt;arg value=&quot;ls ${builds}\* -Include 1cv8.cf -Recurse | split-path -parent | split-path -leaf | foreach {$p = $p + \&quot; -f $_\1cv8.cf -v $_ \&quot;};&quot;/&gt;
+			&lt;arg value=&quot;echo $p&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;loadfile property=&quot;updatescf&quot; srcFile=&quot;.updatescf&quot;&gt;
+			&lt;filterchain&gt;
+				&lt;striplinebreaks/&gt;
+			&lt;/filterchain&gt;
+		&lt;/loadfile&gt;
+		&lt;exec executable=&quot;${1cbin}&quot; output=&quot;.resultcheck&quot; failonerror=&quot;true&quot;&gt;
+			&lt;arg value=&quot;CONFIG&quot;/&gt;
+			&lt;arg value=&quot;${ib}&quot;/&gt;
+			&lt;arg value=&quot;/N${iblogin}&quot;/&gt;
+			&lt;arg value=&quot;/P${ibpassword}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryF${rep}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryN${replogin}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryP${reppassword}&quot;/&gt;
+			&lt;arg value=&quot;/CreateDistributionFiles -cffile ${version}\1cv8.cf -cfufile ${version}\1cv8.cfu&quot;/&gt;
+			&lt;arg value=&quot;${updatessubcf}&quot;/&gt;
+			&lt;arg value=&quot;${updatescf}&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;sleep seconds=&quot;30&quot;/&gt;
+		&lt;exec executable=&quot;cmd.exe&quot;&gt;
+			&lt;arg value=&quot;/c&quot;/&gt;
+			&lt;arg value=&quot;mklink&quot;/&gt;
+			&lt;arg value=&quot;/J&quot;/&gt;
+			&lt;arg value=&quot;.last&quot;/&gt;
+			&lt;arg value=&quot;${version}&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;publishdebug&quot; depends=&quot;build-version&quot; if=&quot;${publishdebugenable}&quot;&gt;
+		&lt;copy todir=&quot;${publishdebug}/${version}&quot;&gt;
+			&lt;fileset dir=&quot;${builds}/${version}&quot;/&gt;
+		&lt;/copy&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;publish&quot; depends=&quot;build-version&quot; if=&quot;${publishenable}&quot;&gt;
+		&lt;copy todir=&quot;${publish}/${version}&quot;&gt;
+			&lt;fileset dir=&quot;${builds}/${version}&quot;/&gt;
+		&lt;/copy&gt;
+		&lt;echo message=&quot;ok&quot;/&gt;
+	&lt;/target&gt;
+	&lt;target name=&quot;report&quot;&gt;
+		&lt;exec executable=&quot;${1cbin}&quot;&gt;
+			&lt;arg value=&quot;CONFIG&quot;/&gt;
+			&lt;arg value=&quot;${ib}&quot;/&gt;
+			&lt;arg value=&quot;/N${iblogin}&quot;/&gt;
+			&lt;arg value=&quot;/P${ibpassword}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryF${rep}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryN${replogin}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryP${reppassword}&quot;/&gt;
+			&lt;arg value=&quot;/ConfigurationRepositoryReport ${version}/.report -NBegin ${NBegin} -NEnd ${NEnd} -GroupByObject -GroupByComment&quot;/&gt;
+		&lt;/exec&gt;
+		&lt;sleep seconds=&quot;30&quot;/&gt;
+	&lt;/target&gt;
+&lt;/project&gt;
+</code></pre>
+
+<p>Данный build.xml подразумевает следующую структуру каталогов:</p>
+
+<pre><code>&lt;Builds&gt;
+    [Project name]
+        [.last]      - ссылка на последнюю мажорную версию
+        [Version 1]
+        [Version 2]
+        ...
+        [Version n]
+        	[.last]  - ссылка на последнюю минорную версию
+        	[Buld 1]
+        	[Buld 2]
+        	...
+        	[Buld m]
+</code></pre>
+
+<p>Например:</p>
+
+<pre><code>MyProject
+	[.last]
+	[1.0.1]
+		[.last]
+		[1.0.1.1]
+		[1.0.1.2]
+		[1.0.1.3]
+		[1.0.1.4]
+	[1.0.2]
+		[.last]
+		[1.0.1.4] - ссылка на предыдущую последнюю (релизную) мажорную сборку
+		[1.0.2.1]
+		[1.0.2.2]
+</code></pre>
+
+<p>Для каждой мажорной версии в jenkins создается своя задача. CI-системы Bamboo или Team City позволяют добиться более удобного представления проектов, но пока мне хватает простоты и бесплатности Jenkins&rsquo;а.</p>
+
+<p>Переключение версии никакими стандартными средствами 1С не предусмотрено, так же никак нельзя автоматизированно узнать номера изменений хранилища конфигурации для построения отчета по измененным объектам.</p>
+
+<p>В чем плюсы такой связки? Во-первых, это упрощает и автоматизирует типовые этапы жизненного цикла проектов. Да - можно было написать все просто скриптами (как и было до этого), но в конечном счете этот путь приведет к написанию чего-нибудь наподобие Apache Ant, когда нужно на этапе выполнения определить зависимость целей и все необходимые параметры. Во-вторых, используя Apache Ant мы обеспечиваем возможность работы с различными современными CI.</p>
+
+  		</div>
+      
+
+    </article>
+    
+
+
+
+
+  	
+
+  	
+<div class="post-comments">
+  
+    
+  
+</div>
+
+
+  </main>
+      <aside class="row-item small-full medium-third right">
+  
+
+	
+<div class="widget">
+	<header>
+		<h4><i class="fi-megaphone"></i> <a href="https://popov.by/post/">Recent Posts</a></h4>
+	</header>
+	<ul>
+		
+		<li><a href="https://popov.by/post/docker-compose-pointer-tip1/">docker-compose pointer tip1</a></li>
+		
+		<li><a href="https://popov.by/post/docker-compose-tip0/">docker compose tip0</a></li>
+		
+		<li><a href="https://popov.by/post/prostoi-vieb-siervier-na-logstash/">Простой веб-сервер на Logstash</a></li>
+		
+		<li><a href="https://popov.by/post/logstash-input-jbdc-every-seconds/">Logstash input jbdc every seconds</a></li>
+		
+		<li><a href="https://popov.by/post/skachivaniie-zavisimostiei-pakietov-yum/">Скачивание зависимостей пакетов yum</a></li>
+		
+		<li><a href="https://popov.by/post/govoriashchii-sieliektor-klassa-v-css/">Говорящий селектор класса в CSS!</a></li>
+		
+		<li><a href="https://popov.by/post/teamcity-1c-enterprise-8/">TeamCity 1C:Enterprise 8</a></li>
+		
+		<li><a href="https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/">Удобная маршрутизация Mikrotik (RouterOS)</a></li>
+		
+		<li><a href="https://popov.by/post/fix-wi-fi-bcm43xx-in-ubuntu/">Fix wi-fi bcm43xx in Ubuntu</a></li>
+		
+		<li><a href="https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/">send sms from shell via mikrotik</a></li>
+		
+	</ul>
+</div>
+
+
+  
+
+	
+
+
+
+	
+
+
+<div class="widget">
+	<header>
+		<h4><i class="fi-pricetag-multiple"></i> <a href="https://popov.by/tags/">Tags</a></h4>
+	</header>
+	<div>
+		
+			<a class="button" href="https://popov.by/tags/docker" title="docker" style="font-size: 12px;">
+				docker (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/docker-compose" title="docker-compose" style="font-size: 12px;">
+				docker-compose (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/mikrotik" title="mikrotik" style="font-size: 12px;">
+				mikrotik (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/tips" title="tips" style="font-size: 12px;">
+				tips (2)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/1c" title="1c" style="font-size: 12px;">
+				1c (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/routing" title="routing" style="font-size: 12px;">
+				routing (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/sms" title="sms" style="font-size: 12px;">
+				sms (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/teamcity" title="teamcity" style="font-size: 12px;">
+				teamcity (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/ubuntu" title="ubuntu" style="font-size: 12px;">
+				ubuntu (1)
+			</a>
+		
+			<a class="button" href="https://popov.by/tags/wi-fi" title="wi-fi" style="font-size: 12px;">
+				wi-fi (1)
+			</a>
+		
+	</div>
+</div>
+
+
+
+
+</aside>
+
+    </div>
+    <footer class="row">
+      <div class="small-full medium-half row-item small-text-center medium-text-left"><small>&copy; 2017 Andrey Popov.</small></div>
+      <div class="small-full medium-half row-item small-text-center medium-text-right" id="social-icons">
+        
+        <a href="https://facebook.com/popov1024">
+          <i class="fi-social-facebook"></i>
+        </a>
+        <a href="https://github.com/popov1024">
+          <i class="fi-social-github"></i>
+        </a>
+        <a href="https://plus.google.com/AndreyPopov1024">
+          <i class="fi-social-google-plus"></i>
+        </a>
+        
+        
+        
+        
+        
+        
+        <a href="https://popov1024.tumblr.com/">
+          <i class="fi-social-tumblr"></i>
+        </a>
+        <a href="https://twitter.com/andrey_popov">
+          <i class="fi-social-twitter"></i>
+        </a>
+        
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+

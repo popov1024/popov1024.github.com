@@ -54,7 +54,7 @@
   
   <url>
     <loc>https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/</loc>
-    <lastmod>2014-08-09T00:00:00+00:00</lastmod>
+    <lastmod>2014-08-09T22:08:59+03:00</lastmod>
   </url>
   
   <url>
@@ -148,11 +148,6 @@
   </url>
   
   <url>
-    <loc>https://popov.by/post/2013-09-04-chef-vs-puppet/</loc>
-    <lastmod>2013-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/</loc>
     <lastmod>2013-06-11T00:00:00+00:00</lastmod>
   </url>
@@ -242,6 +237,12 @@
   <url>
     <loc>https://popov.by/tags/routing/</loc>
     <lastmod>2016-02-02T00:00:00+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov.by/tags/sms/</loc>
+    <lastmod>2014-08-09T22:08:59+03:00</lastmod>
     <priority>0</priority>
   </url>
   
