@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimization on Andrey Popov</title>
+    <link>https://popov.by/categories/optimization/</link>
+    <description>Recent content in Optimization on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sat, 04 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/optimization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Оптимизация запросов SQL от Попова</title>
+      <link>https://popov.by/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/</link>
+      <pubDate>Sat, 04 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/</guid>
+      <description>Обсуждали на работе оптимальность запросов и я в очередной раз свормулировал основное правило, которое нигде не пишут: :) Запрос должен получать лишь ту информацию, которая необходима
+Вытекающие примеры:
+ Select * From ... - это зло. Возвращаемые поля - только те, которые необходимы. Возврашаемые записи - только те, которые необходимы. Select Top 1 field1, field2 ... - это очень правильно, даже если вы уверены, что наложенные ограничения всегда вернут одну запись.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Imho on Andrey Popov</title>
+    <link>https://popov.by/categories/imho/</link>
+    <description>Recent content in Imho on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sat, 15 Feb 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/imho/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Три вещи, которых жутко не хватает в 1С:Предприятие 8</title>
+      <link>https://popov.by/post/2014-02-15-chto-ne-hvataet-v-1c/</link>
+      <pubDate>Sat, 15 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-02-15-chto-ne-hvataet-v-1c/</guid>
+      <description> Нормального scm. Рефакторинг. Регулярных выражений.  </description>
+    </item>
+    
+    <item>
+      <title>RDP - когда будет удобно?</title>
+      <link>https://popov.by/post/2013-11-14-rdp-koghda-budiet-udobno/</link>
+      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-14-rdp-koghda-budiet-udobno/</guid>
+      <description>Мне нравится OS X - все приложения в нем выглядят очень просто, хотя при этом не менее функциональны. Такого достичь очень трудно, но как-то Apple смогла задать правильный дух сторонним разработчикам.
+Единственная моя нужда, которая не удовлетворена нужным приложением - RDP-клиент. Причем их много, все они хорошо делают свою основную задачу, однако хранение самих настроек везде отвратительно, если вообще есть.
+Под Windows я пользуюсь Remote Desktop Connection Manager.
+Однако у него свой формат хранения настроек серверов.</description>
+    </item>
+    
+    <item>
+      <title>iOS7 - fail or in fall?</title>
+      <link>https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/</guid>
+      <description>Самое долгожданное и всеми обсуждаемое событие на WWDC 2013 стала презентация iOS 7. Хотя новый Mac Pro мог вполне бы стать &amp;ldquo;бомбой&amp;rdquo;, но на него не было сделано такого акцента, да и целевая аудитория слишком мала.
+Первое что сделал Джони Айв - &amp;ldquo;расплющил&amp;rdquo; все и уничтожен скевоморфизм.
+Я люблю скевоморфизм. Полюбил его именно в iOS и OS X. Каждое приложение - было как индивидуальная квартира со своими характерными особенностями, входя в которую хочется изучить каждый закуток, но все же есть что-то общее, что не дает заблудиться.</description>
+    </item>
+    
+  </channel>
+</rss>

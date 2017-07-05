@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Andrey Popov</title>
+    <link>https://popov.by/tags/tips/</link>
+    <description>Recent content in Tips on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Wed, 14 Jun 2017 22:51:45 +0300</lastBuildDate>
+    
+	<atom:link href="https://popov.by/tags/tips/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>docker-compose pointer tip1</title>
+      <link>https://popov.by/post/docker-compose-pointer-tip1/</link>
+      <pubDate>Wed, 14 Jun 2017 22:51:45 +0300</pubDate>
+      
+      <guid>https://popov.by/post/docker-compose-pointer-tip1/</guid>
+      <description>Для устранения в docker-compose.yml частого повторения однотианых блоков, можно использовать указатели (в примере это &amp;amp;defaultlogging):
+version: &#39;2&#39; services: foo: image: alpine logging: &amp;amp;defaultlogging driver: json-file options: max-size: &amp;quot;10m&amp;quot; max-file: &amp;quot;5&amp;quot; bar: image: alpine logging: *defaultloggong  </description>
+    </item>
+    
+    <item>
+      <title>docker compose tip0</title>
+      <link>https://popov.by/post/docker-compose-tip0/</link>
+      <pubDate>Sun, 11 Jun 2017 22:08:59 +0300</pubDate>
+      
+      <guid>https://popov.by/post/docker-compose-tip0/</guid>
+      <description>Docker-compose по умолчанию использует в качестве имени проекта имя каталога и создает контейнеры видв folder_bar_1.
+Изменить имя проекта можно с помощью параметра -p или, что удобнее всего, указать имя проекта в .env:
+COMPOSE_PROJECT_NAME=foo  Имена контейнеров тогда всегда будут foo_bar_1.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microsoft on Andrey Popov</title>
+    <link>https://popov.by/categories/microsoft/</link>
+    <description>Recent content in Microsoft on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sun, 28 Apr 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Обзор гаджетов #2 - Арковая клавиатура</title>
+      <link>https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/</link>
+      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/</guid>
+      <description>Для своих windows-дел купил себе Microsoft Arc Keyboard.
+Основной критерий при выборе был размер, схожий с Apple Wireless Keyboard, низкий профиль клавиш и беспроводность. Очень понравилось слегка упругое нажатие клавиш.
+Первый минус данной клавиатуры - радио не стандарта Bluetooth. Однако очень порадовало магнитное крепление донгла с нижней части клавиатуры.
+Верхний ряд меня привел в шок. Зачем мне там home, end, pagedown, pageup? Почему не сделать их аналоги с помощью комбинации Fn + arrow?</description>
+    </item>
+    
+  </channel>
+</rss>

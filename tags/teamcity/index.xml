@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teamcity on Andrey Popov</title>
+    <link>https://popov.by/tags/teamcity/</link>
+    <description>Recent content in Teamcity on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Mon, 09 May 2016 00:00:00 +0300</lastBuildDate>
+    
+	<atom:link href="https://popov.by/tags/teamcity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TeamCity 1C:Enterprise 8</title>
+      <link>https://popov.by/post/teamcity-1c-enterprise-8/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/teamcity-1c-enterprise-8/</guid>
+      <description>Преамбула Для автоматизации сборки конфигураций 1С:Предприятие 8 написал скрипты на PowerShell для TeamCity (TC).
+Это уже не первый мой опыт: в текущее время использую написанный мною на Ant сценарий, который верой и правдой собирает для версии платформы 8.2.
+Что сподвигло к изменениям?
+Прежде всего это выход платформы 8.3.6 в которой появилась возможность подключать конфигурацию в хранилищу из командной строки. Т.е. позволяет автоматизировать создания сборки с нуля новых проектов.
+Во-вторых, я организовал теперь все в виде шаблонов для TC с минимальным набором параметров сборки.</description>
+    </item>
+    
+  </channel>
+</rss>

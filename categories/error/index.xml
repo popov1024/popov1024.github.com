@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Error on Andrey Popov</title>
+    <link>https://popov.by/categories/error/</link>
+    <description>Recent content in Error on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Tue, 08 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/error/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1C WSDL and fields order</title>
+      <link>https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/</guid>
+      <description>Столкнулся с особенностью 1С:Предприятие 8 в части валидации сообщений SOAP: порядок полей в ответе должен строго соответствовать порядку полей в описании. Иначе будут происходить ошибки вида:
+Проверка свойства &#39;Foo&#39;: форма: Элемент имя: {http://xmlns.oracle.com/orawsv/WS/myws}Foo тип: {http://xmlns.oracle.com/orawsv/WS/myws}fooType Не установлено значение одного из следующих свойств: Bar  Для данного примера - не соответсве полей Foo и Bar.</description>
+    </item>
+    
+    <item>
+      <title>1C:Enterprise 8.2 x64 on IIS error</title>
+      <link>https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/</guid>
+      <description>Если на платформе 1С:Предприятие 8.2 x64 опубликованной на IIS в результате происходит ошибка вида:
+Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).Описание: Необработанное исключение при выполнении текущего веб-запроса. Изучите трассировку стека для получения дополнительных сведений о данной ошибке и о вызвавшем ее фрагменте кода. Сведения об исключении: System.Web.HttpException: Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).  то она исправляется следующим способом в Web.config:
+Ключевым параметром для исправления здесь является preCondition=&amp;quot;bitness64&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>1С error - Для полей, начиная с FileName, не хватило значений (pos=19)</title>
+      <link>https://popov.by/post/2011-07-29-1c-error-filename-pos19/</link>
+      <pubDate>Fri, 29 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2011-07-29-1c-error-filename-pos19/</guid>
+      <description>Ошибка проявляется на 1С:предприятие 8.1.15.14
+В процессе обновления информационной базы произошла критическая ошибка. по причине: Ошибка SDBL: Для полей, начиная с FileName, не хватило значений (pos=19)  Вариант решения — очистить таблицы изменений конфигурации:
+TRUNCATE TABLE _ConfigChangeRec TRUNCATE TABLE _ConfigChangeRec_ExtProps  </description>
+    </item>
+    
+  </channel>
+</rss>

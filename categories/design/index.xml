@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Andrey Popov</title>
+    <link>https://popov.by/categories/design/</link>
+    <description>Recent content in Design on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sat, 18 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Эволюция дизайна MacPro</title>
+      <link>https://popov.by/post/2014-01-18-evoliutsiia-dizaina-macpro/</link>
+      <pubDate>Sat, 18 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-18-evoliutsiia-dizaina-macpro/</guid>
+      <description>У Mac Pro самая интересная история развития.</description>
+    </item>
+    
+  </channel>
+</rss>

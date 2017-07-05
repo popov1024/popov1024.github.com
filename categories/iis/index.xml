@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iis on Andrey Popov</title>
+    <link>https://popov.by/categories/iis/</link>
+    <description>Recent content in Iis on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Mon, 03 Mar 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/iis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1C:Enterprise 8.2 x64 on IIS error</title>
+      <link>https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/</guid>
+      <description>Если на платформе 1С:Предприятие 8.2 x64 опубликованной на IIS в результате происходит ошибка вида:
+Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).Описание: Необработанное исключение при выполнении текущего веб-запроса. Изучите трассировку стека для получения дополнительных сведений о данной ошибке и о вызвавшем ее фрагменте кода. Сведения об исключении: System.Web.HttpException: Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).  то она исправляется следующим способом в Web.config:
+Ключевым параметром для исправления здесь является preCondition=&amp;quot;bitness64&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

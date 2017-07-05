@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Auth on Andrey Popov</title>
+    <link>https://popov.by/categories/auth/</link>
+    <description>Recent content in Auth on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/auth/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PowerShell SOAP</title>
+      <link>https://popov.by/post/2013-11-18-powershell-soap/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-18-powershell-soap/</guid>
+      <description>Пример вызова метода Web сервиса посредством SOAP:
+$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force $mycreds = New-Object System.Management.Automation.PSCredential (&amp;quot;userName&amp;quot;, $secpasswd) $uri = &amp;quot;http://localhost/IB/ws/example?wsdl&amp;quot; try { $service = New-WebServiceProxy -Uri $uri -Credential $mycreds } catch { Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39; } if($service -ne $null){ try{ $version = $service.GetVersion() echo $version } catch{ Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39; } }  В данном случае использовался вызов Web сервиса 1C:Предприятие 8.2</description>
+    </item>
+    
+  </channel>
+</rss>

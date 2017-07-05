@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ant on Andrey Popov</title>
+    <link>https://popov.by/categories/ant/</link>
+    <description>Recent content in Ant on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sat, 16 Mar 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/ant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1С:Предприятие &#43; Ant &#43; jenkins</title>
+      <link>https://popov.by/post/2013-03-16-1c-ant-jenkins/</link>
+      <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-03-16-1c-ant-jenkins/</guid>
+      <description>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно. Мои проекты имеют следующий жизненный цикл:
+ Внесение изменений в код согласно Jira Выпуск тестовой сборки Исправление ошибок по необходимости Выпуск релиза (проверка конфигурации, формирование cf + cfu, формирование отчета по измененным объектам хранилища конфигурации) Изменение версии в хранилище конфигурации  Для выпуска релиза мной разработан build.xml для Apache Ant
+&amp;lt;project name=&amp;quot;kisnpo&amp;quot; default=&amp;quot;build&amp;quot;&amp;gt; &amp;lt;description&amp;gt;kisnpo build&amp;lt;/description&amp;gt; &amp;lt;property environment=&amp;quot;env&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;rep&amp;quot; value=&amp;quot;tcp://share\myproject\&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;replogin&amp;quot; value=&amp;quot;login&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;reppassword&amp;quot; value=&amp;quot;password&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;ibname&amp;quot; value=&amp;quot;c:\ib\myproject&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;ib&amp;quot; value=&amp;quot;/F${ibname}&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;iblogin&amp;quot; value=&amp;quot;login&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;ibpassword&amp;quot; value=&amp;quot;password&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;connectionstring&amp;quot; value=&amp;quot;Usr=&amp;quot;${iblogin}&amp;quot;;Pwd=&amp;quot;${ibpassword}&amp;quot;;File=&amp;quot;${ibname}&amp;quot;;&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;1cbin&amp;quot; location=&amp;quot;C:\Program Files (x86)\1cv81\bin\1cv8.</description>
+    </item>
+    
+  </channel>
+</rss>

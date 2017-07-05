@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1с on Andrey Popov</title>
+    <link>https://popov.by/categories/1%D1%81/</link>
+    <description>Recent content in 1с on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sat, 15 Feb 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/1%D1%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Три вещи, которых жутко не хватает в 1С:Предприятие 8</title>
+      <link>https://popov.by/post/2014-02-15-chto-ne-hvataet-v-1c/</link>
+      <pubDate>Sat, 15 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-02-15-chto-ne-hvataet-v-1c/</guid>
+      <description> Нормального scm. Рефакторинг. Регулярных выражений.  </description>
+    </item>
+    
+  </channel>
+</rss>

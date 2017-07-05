@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Сервис on Andrey Popov</title>
+    <link>https://popov.by/categories/web-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81/</link>
+    <description>Recent content in Web Сервис on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Fri, 22 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/web-%D1%81%D0%B5%D1%80%D0%B2%D0%B8%D1%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1С Web-Cервис -- Определение типа</title>
+      <link>https://popov.by/post/2013-11-22-1c-web-siervis-opriedielieniie-tipa/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-22-1c-web-siervis-opriedielieniie-tipa/</guid>
+      <description>Вот такая структура типов обычно ставит в тупик из-за недостаточно четкого описание объектной модели типизации XDTO.
+Обычно такая ситуация возникает в таких ситуациях: когда описание делается вложено, а не разбито на отдельные сущности.
+Пример программы формирования объекта данной структуры:
+ws = WSСсылки.WSСсылка.СоздатьWSПрокси(&amp;quot;http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&amp;quot;, &amp;quot;COMPLEXWSService&amp;quot;, &amp;quot;COMPLEXWSPort&amp;quot;); ОпределениеТипа = ws.ФабрикаXDTO.Тип(&amp;quot;http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&amp;quot;, &amp;quot;CMPLX_DATAType&amp;quot;); Вх = ws.ФабрикаXDTO.Создать(ОпределениеТипа); ТипCMPLX_DATA = ОпределениеТипа.Свойства.Получить(&amp;quot;CMPLX_DATA&amp;quot;).Тип; Вх.CMPLX_DATA = ws.ФабрикаXDTO.Создать(ТипCMPLX_DATA); Вх.CMPLX_DATA.NN = 123; Вх.CMPLX_DATA.DD = ТекущаяДата(); Вх.CMPLX_DATA.TT = ТекущаяДата(); Вх.CMPLX_DATA.SS = ws.ФабрикаXDTO.Создать(ТипCMPLX_DATA.Свойства.Получить(&amp;quot;SS&amp;quot;).Тип, &amp;quot;пример строки&amp;quot;); Вх.</description>
+    </item>
+    
+    <item>
+      <title>Загрузка курсов валют НБРБ</title>
+      <link>https://popov.by/post/2012-01-21-zaghruzka-kursov-valiut-nbrb/</link>
+      <pubDate>Sat, 21 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2012-01-21-zaghruzka-kursov-valiut-nbrb/</guid>
+      <description>Возникла нужда воспользоваться Web-сервисом НБРБ для загрузки курса в 1С:Предприятие 8.
+Получился такой пример:
+ОпределениеСервисаНБРБ = Новый WSОпределения(&amp;quot;http://www.nbrb.by/Services/ExRates.asmx?WSDL&amp;quot;); СервисНБРБ = Новый WSПрокси(ОпределениеСервисаНБРБ, &amp;quot;http://www.nbrb.by/&amp;quot;, &amp;quot;ExRates&amp;quot;, &amp;quot;ExRatesSoap&amp;quot;); ТипПараметраДатаКурса = СервисНБРБ.ФабрикаXDTO.Тип(&amp;quot;http://www.nbrb.by/&amp;quot;, &amp;quot;ExRatesDaily&amp;quot;); ДатаКурса = СервисНБРБ.ФабрикаXDTO.Создать(ТипПараметраДатаКурса); ДатаКурса.onDate = ТекущаяДата(); КурсыВалютНаДату = СервисНБРБ.ExRatesDaily(ДатаКурса); СписокКурсовВалют = КурсыВалютНаДату.ExRatesDailyResult.diffgram.NewDataSet.DailyExRatesOnDate; Объект.КурсыВалют.Очистить(); Для Каждого ИнформацияОКурсеВалюты Из СписокКурсовВалют Цикл КурсВалюты = Объект.КурсыВалют.Добавить(); ЗаполнитьЗначенияСвойств(КурсВалюты, ИнформацияОКурсеВалюты); КонецЦикла;  </description>
+    </item>
+    
+  </channel>
+</rss>

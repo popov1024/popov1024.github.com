@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sms on Andrey Popov</title>
+    <link>https://popov.by/tags/sms/</link>
+    <description>Recent content in Sms on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sat, 09 Aug 2014 22:08:59 +0300</lastBuildDate>
+    
+	<atom:link href="https://popov.by/tags/sms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>send sms from shell via mikrotik</title>
+      <link>https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/</link>
+      <pubDate>Sat, 09 Aug 2014 22:08:59 +0300</pubDate>
+      
+      <guid>https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/</guid>
+      <description>http://wiki.mikrotik.com/wiki/Use_SSH_to_execute_commands_(DSA_key_login)
+ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;  </description>
+    </item>
+    
+  </channel>
+</rss>

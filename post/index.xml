@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Andrey Popov</title>
+    <link>https://popov.by/post/</link>
+    <description>Recent content in Posts on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Tue, 20 Jun 2017 23:21:20 +0300</lastBuildDate>
+    
+	<atom:link href="https://popov.by/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Собственная система мониторинга сайтов</title>
+      <link>https://popov.by/post/self_site_monitoring/</link>
+      <pubDate>Tue, 20 Jun 2017 23:21:20 +0300</pubDate>
+      
+      <guid>https://popov.by/post/self_site_monitoring/</guid>
+      <description>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность. Можно пойти по пути покупки услуг (или пользоваться бесплатными) соответствущих сервисjd. Благо их много.
+Но тут всегда сталкиваемся с несколькими проблемами: периодичность опроса и гибкость настройки.
+Другой вариант поднять свой сервис мониторинга, о чем и пойдет далее речь.
+Для наших целей будем использовать следующие сервисы и технологии: - DigitalOcean - Monit - Docker - Nginx - letsencrypt</description>
+    </item>
+    
+    <item>
+      <title>docker-compose pointer tip1</title>
+      <link>https://popov.by/post/docker-compose-pointer-tip1/</link>
+      <pubDate>Wed, 14 Jun 2017 22:51:45 +0300</pubDate>
+      
+      <guid>https://popov.by/post/docker-compose-pointer-tip1/</guid>
+      <description>Для устранения в docker-compose.yml частого повторения однотианых блоков, можно использовать указатели (в примере это &amp;amp;defaultlogging):
+version: &#39;2&#39; services: foo: image: alpine logging: &amp;amp;defaultlogging driver: json-file options: max-size: &amp;quot;10m&amp;quot; max-file: &amp;quot;5&amp;quot; bar: image: alpine logging: *defaultloggong  </description>
+    </item>
+    
+    <item>
+      <title>docker compose tip0</title>
+      <link>https://popov.by/post/docker-compose-tip0/</link>
+      <pubDate>Sun, 11 Jun 2017 22:08:59 +0300</pubDate>
+      
+      <guid>https://popov.by/post/docker-compose-tip0/</guid>
+      <description>Docker-compose по умолчанию использует в качестве имени проекта имя каталога и создает контейнеры видв folder_bar_1.
+Изменить имя проекта можно с помощью параметра -p или, что удобнее всего, указать имя проекта в .env:
+COMPOSE_PROJECT_NAME=foo  Имена контейнеров тогда всегда будут foo_bar_1.</description>
+    </item>
+    
+    <item>
+      <title>Простой веб-сервер на Logstash</title>
+      <link>https://popov.by/post/prostoi-vieb-siervier-na-logstash/</link>
+      <pubDate>Tue, 06 Sep 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/prostoi-vieb-siervier-na-logstash/</guid>
+      <description>input { http { } } output { stdout { codec =&amp;gt; rubydebug } }  </description>
+    </item>
+    
+    <item>
+      <title>Logstash input jbdc every seconds</title>
+      <link>https://popov.by/post/logstash-input-jbdc-every-seconds/</link>
+      <pubDate>Mon, 08 Aug 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/logstash-input-jbdc-every-seconds/</guid>
+      <description>schedule =&amp;gt; &amp;quot;* * * * * *&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>Скачивание зависимостей пакетов yum</title>
+      <link>https://popov.by/post/skachivaniie-zavisimostiei-pakietov-yum/</link>
+      <pubDate>Sun, 03 Jul 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/skachivaniie-zavisimostiei-pakietov-yum/</guid>
+      <description>Столкнулся с необходимостью установки докера на целевой хост без доступа в интернет.
+Пазвернул посредство вагранта CentOS 7 и получил все пакеты (естественно прописав репозиторий докера):
+$ sudo yum install --downloadonly --downloaddir=docker docker-engine  </description>
+    </item>
+    
+    <item>
+      <title>Говорящий селектор класса в CSS!</title>
+      <link>https://popov.by/post/govoriashchii-sieliektor-klassa-v-css/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/govoriashchii-sieliektor-klassa-v-css/</guid>
+      <description>.titanic {float: none;}  </description>
+    </item>
+    
+    <item>
+      <title>TeamCity 1C:Enterprise 8</title>
+      <link>https://popov.by/post/teamcity-1c-enterprise-8/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/teamcity-1c-enterprise-8/</guid>
+      <description>Преамбула Для автоматизации сборки конфигураций 1С:Предприятие 8 написал скрипты на PowerShell для TeamCity (TC).
+Это уже не первый мой опыт: в текущее время использую написанный мною на Ant сценарий, который верой и правдой собирает для версии платформы 8.2.
+Что сподвигло к изменениям?
+Прежде всего это выход платформы 8.3.6 в которой появилась возможность подключать конфигурацию в хранилищу из командной строки. Т.е. позволяет автоматизировать создания сборки с нуля новых проектов.
+Во-вторых, я организовал теперь все в виде шаблонов для TC с минимальным набором параметров сборки.</description>
+    </item>
+    
+    <item>
+      <title>Удобная маршрутизация Mikrotik (RouterOS)</title>
+      <link>https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/</guid>
+      <description>Задача Необходимо маршрутизировать несколько ip или подсетей по одному правилу.
+Решение Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&amp;hellip;
+Благо RouterOS поддерживает работу со списками и маркировку пакетов.
+И так, создаем список work:
+/ip firewall address-list add address=10.10.0.0/16 list=work add address=192.168.1.0/24 list=work  Делаем пометку workt пакетов согласно данного списка work:</description>
+    </item>
+    
+    <item>
+      <title>Fix wi-fi bcm43xx in Ubuntu</title>
+      <link>https://popov.by/post/fix-wi-fi-bcm43xx-in-ubuntu/</link>
+      <pubDate>Sun, 27 Dec 2015 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/fix-wi-fi-bcm43xx-in-ubuntu/</guid>
+      <description>$ sudo apt-get purge bcmwl-kernel-source  $ sudo apt-get install --reinstall b43-fwcutter firmware-b43-installer  Reboot</description>
+    </item>
+    
+    <item>
+      <title>send sms from shell via mikrotik</title>
+      <link>https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/</link>
+      <pubDate>Sat, 09 Aug 2014 22:08:59 +0300</pubDate>
+      
+      <guid>https://popov.by/post/2014-08-09-send-sms-from-shell-via-mikrotik/</guid>
+      <description>http://wiki.mikrotik.com/wiki/Use_SSH_to_execute_commands_(DSA_key_login)
+ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;  </description>
+    </item>
+    
+    <item>
+      <title>1C WSDL and fields order</title>
+      <link>https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/</guid>
+      <description>Столкнулся с особенностью 1С:Предприятие 8 в части валидации сообщений SOAP: порядок полей в ответе должен строго соответствовать порядку полей в описании. Иначе будут происходить ошибки вида:
+Проверка свойства &#39;Foo&#39;: форма: Элемент имя: {http://xmlns.oracle.com/orawsv/WS/myws}Foo тип: {http://xmlns.oracle.com/orawsv/WS/myws}fooType Не установлено значение одного из следующих свойств: Bar  Для данного примера - не соответсве полей Foo и Bar.</description>
+    </item>
+    
+    <item>
+      <title>1C:Enterprise 8.2 x64 on IIS error</title>
+      <link>https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/</link>
+      <pubDate>Mon, 03 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-03-03-1c-enterprise-8-dot-2-x64-on-iis-error/</guid>
+      <description>Если на платформе 1С:Предприятие 8.2 x64 опубликованной на IIS в результате происходит ошибка вида:
+Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).Описание: Необработанное исключение при выполнении текущего веб-запроса. Изучите трассировку стека для получения дополнительных сведений о данной ошибке и о вызвавшем ее фрагменте кода. Сведения об исключении: System.Web.HttpException: Обнаружено потенциально опасное значение Request.Path, полученное от клиента (:).  то она исправляется следующим способом в Web.config:
+Ключевым параметром для исправления здесь является preCondition=&amp;quot;bitness64&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Обзор гаджетов #3 - Электронная сигарета Joyetech eGo-CC</title>
+      <link>https://popov.by/post/2014-02-20-obzor-ghadzhietov-number-3-eliektronnaia-sigharieta-joyetech-ego-cc/</link>
+      <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-02-20-obzor-ghadzhietov-number-3-eliektronnaia-sigharieta-joyetech-ego-cc/</guid>
+      <description>Уже месяц, как вместо курения обычных сигарет, «парю» электронную eGo-CC.
+ Мысль о курение обычных уже в первый день была какой-то марозматичной Парить электронные гораздо удобней - не нужно никуда ходить, можно курить на рабочем месте, в машине или на ходу сделать пару тяг. Но тут и минус - если в дороге закончилась жижа или сел аккумулятор, то ,собственно говоря, все. Кроме выбора крепости, как в обычных сигаретах, можно выбирать еще и аромат.</description>
+    </item>
+    
+    <item>
+      <title>Три вещи, которых жутко не хватает в 1С:Предприятие 8</title>
+      <link>https://popov.by/post/2014-02-15-chto-ne-hvataet-v-1c/</link>
+      <pubDate>Sat, 15 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-02-15-chto-ne-hvataet-v-1c/</guid>
+      <description> Нормального scm. Рефакторинг. Регулярных выражений.  </description>
+    </item>
+    
+    <item>
+      <title>MacMini(Mid 2011)and RAM DDR3 1600</title>
+      <link>https://popov.by/post/2014-01-18-macmini-and-ram-ddr3-1600/</link>
+      <pubDate>Sat, 18 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-18-macmini-and-ram-ddr3-1600/</guid>
+      <description>Мой MacMini (середина 2011), хоть и заявленна поддержка DDR3 1333 MHz, прекрасно работает с DDR3 1600 (PC3-12800 CL11 204-Pin SODIMM). Тестировал от вендора Kingston.
+Кстати, заявленные макисмум 8 Gb тоже не правда. 16 Gb вполне себя работоспособно чувствуют.</description>
+    </item>
+    
+    <item>
+      <title>Эволюция дизайна MacPro</title>
+      <link>https://popov.by/post/2014-01-18-evoliutsiia-dizaina-macpro/</link>
+      <pubDate>Sat, 18 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-18-evoliutsiia-dizaina-macpro/</guid>
+      <description>У Mac Pro самая интересная история развития.</description>
+    </item>
+    
+    <item>
+      <title>My iOS Life</title>
+      <link>https://popov.by/post/2014-01-07-my-ios-life/</link>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-07-my-ios-life/</guid>
+      <description>На выходных занялся разбором и бекапом фоточек. Заметил, что с iPhone накопилось очень много скрншотов, как случайных, так и несущих определенный смысл.
+Решил, что не нужно пропадать добру и выложил на тумблер в отдельный блог My iOS Life.</description>
+    </item>
+    
+    <item>
+      <title>Оптимизация запросов SQL от Попова</title>
+      <link>https://popov.by/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/</link>
+      <pubDate>Sat, 04 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-04-optimizatsiia-zaprosov-sql-ot-popova/</guid>
+      <description>Обсуждали на работе оптимальность запросов и я в очередной раз свормулировал основное правило, которое нигде не пишут: :) Запрос должен получать лишь ту информацию, которая необходима
+Вытекающие примеры:
+ Select * From ... - это зло. Возвращаемые поля - только те, которые необходимы. Возврашаемые записи - только те, которые необходимы. Select Top 1 field1, field2 ... - это очень правильно, даже если вы уверены, что наложенные ограничения всегда вернут одну запись.</description>
+    </item>
+    
+    <item>
+      <title>Backup Stash</title>
+      <link>https://popov.by/post/2014-01-02-backup-stash/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-02-backup-stash/</guid>
+      <description>java -Dstash.home=/opt/stash-home/ -Dbackup.home=/opt/stash-backup -Dstash.user=user -Dstash.password=password -Dstash.baseUrl=http://example.com:7990 -jar /opt/stash-backup-client-1.1.0/stash-backup-client.jar  </description>
+    </item>
+    
+    <item>
+      <title>Backup TeamCity</title>
+      <link>https://popov.by/post/2014-01-02-backup-teamcity/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-02-backup-teamcity/</guid>
+      <description>В моей конфигурации сервер TeamCity работает под CentOS. Установлен в /opt/jetbrains/teamcity/, домашний каталог в /home/teamcity/.BuildServer.
+/opt/jetbrains/teamcity/bin/maintainDB.sh backup -A /home/teamcity/.BuildServer --all  </description>
+    </item>
+    
+    <item>
+      <title>Total balancer - start</title>
+      <link>https://popov.by/post/2013-12-30-total-balancer-start/</link>
+      <pubDate>Mon, 30 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-12-30-total-balancer-start/</guid>
+      <description>Собрался с силами и начал осуществлять свою давнюю мечту - сделать сервис сбора балансов с различных сервисов (операторы мобильной связи, интернет провайдеры и пр.)
+Как-то так сложилось, что под iOS практически нет аналогичных приложений для РБ (по крайней мере на текущий момент).
+Из технологий использую:
+ Node.js (Express) Bootstrap 3 Heroku MongoDB  </description>
+    </item>
+    
+    <item>
+      <title>hello world via Alfred2</title>
+      <link>https://popov.by/post/2013-12-23-hello-world-via-alfred2/</link>
+      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-12-23-hello-world-via-alfred2/</guid>
+      <description>Это проверка написания поста с помощью связки Octopress + Alfred 2 + iA Writer</description>
+    </item>
+    
+    <item>
+      <title>Трудности понимания</title>
+      <link>https://popov.by/post/2013-12-23-trudnosti-ponimaniia/</link>
+      <pubDate>Mon, 23 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-12-23-trudnosti-ponimaniia/</guid>
+      <description>{% youtube ErDIj51g9NU %}
+{% youtube 20UkYlHoqEM %}</description>
+    </item>
+    
+    <item>
+      <title>singleton class csharp</title>
+      <link>https://popov.by/post/2013-11-24-singleton-class-csharp/</link>
+      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-24-singleton-class-csharp/</guid>
+      <description>По методу Джеффри Рихтера использую такой singleton:
+using System; using System.Threading; public sealed class singletonclass { private static readonly Object SLock = new Object(); private static singletonclass _instance; private readonly int bar; private singletonclass() { bar = 123; } public static singletonclass Instance { get { if (_instance != null) return _instance; Monitor.Enter(SLock); var temp = new singletonclass(); Interlocked.Exchange(ref _instance, temp); Monitor.Exit(SLock); return _instance; } } public int foo() { return bar; } } </description>
+    </item>
+    
+    <item>
+      <title>1С Web-Cервис -- Определение типа</title>
+      <link>https://popov.by/post/2013-11-22-1c-web-siervis-opriedielieniie-tipa/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-22-1c-web-siervis-opriedielieniie-tipa/</guid>
+      <description>Вот такая структура типов обычно ставит в тупик из-за недостаточно четкого описание объектной модели типизации XDTO.
+Обычно такая ситуация возникает в таких ситуациях: когда описание делается вложено, а не разбито на отдельные сущности.
+Пример программы формирования объекта данной структуры:
+ws = WSСсылки.WSСсылка.СоздатьWSПрокси(&amp;quot;http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&amp;quot;, &amp;quot;COMPLEXWSService&amp;quot;, &amp;quot;COMPLEXWSPort&amp;quot;); ОпределениеТипа = ws.ФабрикаXDTO.Тип(&amp;quot;http://xmlns.oracle.com/orawsv/OWNER_OIL/COMPLEXWS&amp;quot;, &amp;quot;CMPLX_DATAType&amp;quot;); Вх = ws.ФабрикаXDTO.Создать(ОпределениеТипа); ТипCMPLX_DATA = ОпределениеТипа.Свойства.Получить(&amp;quot;CMPLX_DATA&amp;quot;).Тип; Вх.CMPLX_DATA = ws.ФабрикаXDTO.Создать(ТипCMPLX_DATA); Вх.CMPLX_DATA.NN = 123; Вх.CMPLX_DATA.DD = ТекущаяДата(); Вх.CMPLX_DATA.TT = ТекущаяДата(); Вх.CMPLX_DATA.SS = ws.ФабрикаXDTO.Создать(ТипCMPLX_DATA.Свойства.Получить(&amp;quot;SS&amp;quot;).Тип, &amp;quot;пример строки&amp;quot;); Вх.</description>
+    </item>
+    
+    <item>
+      <title>PowerShell SOAP</title>
+      <link>https://popov.by/post/2013-11-18-powershell-soap/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-18-powershell-soap/</guid>
+      <description>Пример вызова метода Web сервиса посредством SOAP:
+$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force $mycreds = New-Object System.Management.Automation.PSCredential (&amp;quot;userName&amp;quot;, $secpasswd) $uri = &amp;quot;http://localhost/IB/ws/example?wsdl&amp;quot; try { $service = New-WebServiceProxy -Uri $uri -Credential $mycreds } catch { Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39; } if($service -ne $null){ try{ $version = $service.GetVersion() echo $version } catch{ Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39; } }  В данном случае использовался вызов Web сервиса 1C:Предприятие 8.2</description>
+    </item>
+    
+    <item>
+      <title>RDP - когда будет удобно?</title>
+      <link>https://popov.by/post/2013-11-14-rdp-koghda-budiet-udobno/</link>
+      <pubDate>Thu, 14 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-14-rdp-koghda-budiet-udobno/</guid>
+      <description>Мне нравится OS X - все приложения в нем выглядят очень просто, хотя при этом не менее функциональны. Такого достичь очень трудно, но как-то Apple смогла задать правильный дух сторонним разработчикам.
+Единственная моя нужда, которая не удовлетворена нужным приложением - RDP-клиент. Причем их много, все они хорошо делают свою основную задачу, однако хранение самих настроек везде отвратительно, если вообще есть.
+Под Windows я пользуюсь Remote Desktop Connection Manager.
+Однако у него свой формат хранения настроек серверов.</description>
+    </item>
+    
+    <item>
+      <title>TeamCity in Linux</title>
+      <link>https://popov.by/post/2013-11-13-teamcity-linux/</link>
+      <pubDate>Wed, 13 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-13-teamcity-linux/</guid>
+      <description>Установка TeamCity для Linux освещена не плохо, но как-то смазан процесс создания автостарта данного сервиса. В моем случае интересен только сам сервер (без сборщика-агента) и работает все на CentOS 5.
+Отдельный пользователь в системе:
+sudo /usr/sbin/useradd teamcity sudo passwd teamcity  Содержимое стартового скрипта /etc/init.d/teamcity
+#!/bin/bash # # teamcity TeamCity Continuous Integration Server # # chkconfig: 345 80 30 # description: TeamCity is a continuous Integration Server # processname: teamcity # config: /etc/sysconfig/teamcity # # TeamCity Linux service controller script case &amp;quot;$1&amp;quot; in start) su - teamcity -c &amp;quot;cd /opt/jetbrains/teamcity/bin/ ; .</description>
+    </item>
+    
+    <item>
+      <title>iOS7 - fail or in fall?</title>
+      <link>https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/</link>
+      <pubDate>Tue, 11 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-06-11-ios7-fail-or-in-fall/</guid>
+      <description>Самое долгожданное и всеми обсуждаемое событие на WWDC 2013 стала презентация iOS 7. Хотя новый Mac Pro мог вполне бы стать &amp;ldquo;бомбой&amp;rdquo;, но на него не было сделано такого акцента, да и целевая аудитория слишком мала.
+Первое что сделал Джони Айв - &amp;ldquo;расплющил&amp;rdquo; все и уничтожен скевоморфизм.
+Я люблю скевоморфизм. Полюбил его именно в iOS и OS X. Каждое приложение - было как индивидуальная квартира со своими характерными особенностями, входя в которую хочется изучить каждый закуток, но все же есть что-то общее, что не дает заблудиться.</description>
+    </item>
+    
+    <item>
+      <title>Обзор гаджетов #2 - Арковая клавиатура</title>
+      <link>https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/</link>
+      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/</guid>
+      <description>Для своих windows-дел купил себе Microsoft Arc Keyboard.
+Основной критерий при выборе был размер, схожий с Apple Wireless Keyboard, низкий профиль клавиш и беспроводность. Очень понравилось слегка упругое нажатие клавиш.
+Первый минус данной клавиатуры - радио не стандарта Bluetooth. Однако очень порадовало магнитное крепление донгла с нижней части клавиатуры.
+Верхний ряд меня привел в шок. Зачем мне там home, end, pagedown, pageup? Почему не сделать их аналоги с помощью комбинации Fn + arrow?</description>
+    </item>
+    
+    <item>
+      <title>Обзор гаджетов #1 - Eye-Fi</title>
+      <link>https://popov.by/post/2013-04-22-obzor-ghadzhietov-number-1-eye-fi/</link>
+      <pubDate>Mon, 22 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-04-22-obzor-ghadzhietov-number-1-eye-fi/</guid>
+      <description>Относительно недавно купил попробовать с eBay карточку памяти Eye-Fi Connect X2 4Gb. Мой фотоаппарат Nikon D3100 в характеристиках имел совместимость с данными карточками и уж как было не попробовать.
+Сразу скажу, что я привык фотографировать все в RAW, однако данная карточка не поддерживает данный формат для передачи, о чем честно в принципе и заявлено на сайте.
+Что же в конечном счете позволяет сделать данный гаджет? Если ваш фотоаппарат не оснащен Wi-Fi (почему производители массово не внедряют - я не понимаю), то эта карточка позволит вам весь отснятый материал передать на компьютер или смартфон (поддерживаются iOS и Android) с помощью программы &amp;ldquo;Eye-Fi Center&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Обзор гаджетов #0 - Самый лучший роутер</title>
+      <link>https://popov.by/post/2013-04-05-obzor-ghadzhietov-number-0-samyi-luchshii-routier/</link>
+      <pubDate>Fri, 05 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-04-05-obzor-ghadzhietov-number-0-samyi-luchshii-routier/</guid>
+      <description>Беспорно, для домашнего использования самые лучшии роутеры производит Mikrotik. В каком еще роутере можно встретить такой спектр функциональных опций за относительно скромный ценник?
+Обладая Wi-Fi категории N и пятью гигабитными портами, он позволил настроить необходимый мне вариант сети:
+ Одновременное подключение к двум интернет провайдерам Гибкая настройка файревола и QoS PPTP и L2TP сервер Удаленный доступ по SSH  Если вдруг чего-то из коробки нет, то можно использовать скрипты. Например, использование сервиса DyDNS.</description>
+    </item>
+    
+    <item>
+      <title>1С:Предприятие &#43; Ant &#43; jenkins</title>
+      <link>https://popov.by/post/2013-03-16-1c-ant-jenkins/</link>
+      <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-03-16-1c-ant-jenkins/</guid>
+      <description>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно. Мои проекты имеют следующий жизненный цикл:
+ Внесение изменений в код согласно Jira Выпуск тестовой сборки Исправление ошибок по необходимости Выпуск релиза (проверка конфигурации, формирование cf + cfu, формирование отчета по измененным объектам хранилища конфигурации) Изменение версии в хранилище конфигурации  Для выпуска релиза мной разработан build.xml для Apache Ant
+&amp;lt;project name=&amp;quot;kisnpo&amp;quot; default=&amp;quot;build&amp;quot;&amp;gt; &amp;lt;description&amp;gt;kisnpo build&amp;lt;/description&amp;gt; &amp;lt;property environment=&amp;quot;env&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;rep&amp;quot; value=&amp;quot;tcp://share\myproject\&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;replogin&amp;quot; value=&amp;quot;login&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;reppassword&amp;quot; value=&amp;quot;password&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;ibname&amp;quot; value=&amp;quot;c:\ib\myproject&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;ib&amp;quot; value=&amp;quot;/F${ibname}&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;iblogin&amp;quot; value=&amp;quot;login&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;ibpassword&amp;quot; value=&amp;quot;password&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;connectionstring&amp;quot; value=&amp;quot;Usr=&amp;quot;${iblogin}&amp;quot;;Pwd=&amp;quot;${ibpassword}&amp;quot;;File=&amp;quot;${ibname}&amp;quot;;&amp;quot;/&amp;gt; &amp;lt;property name=&amp;quot;1cbin&amp;quot; location=&amp;quot;C:\Program Files (x86)\1cv81\bin\1cv8.</description>
+    </item>
+    
+    <item>
+      <title>Загрузка курсов валют НБРБ</title>
+      <link>https://popov.by/post/2012-01-21-zaghruzka-kursov-valiut-nbrb/</link>
+      <pubDate>Sat, 21 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2012-01-21-zaghruzka-kursov-valiut-nbrb/</guid>
+      <description>Возникла нужда воспользоваться Web-сервисом НБРБ для загрузки курса в 1С:Предприятие 8.
+Получился такой пример:
+ОпределениеСервисаНБРБ = Новый WSОпределения(&amp;quot;http://www.nbrb.by/Services/ExRates.asmx?WSDL&amp;quot;); СервисНБРБ = Новый WSПрокси(ОпределениеСервисаНБРБ, &amp;quot;http://www.nbrb.by/&amp;quot;, &amp;quot;ExRates&amp;quot;, &amp;quot;ExRatesSoap&amp;quot;); ТипПараметраДатаКурса = СервисНБРБ.ФабрикаXDTO.Тип(&amp;quot;http://www.nbrb.by/&amp;quot;, &amp;quot;ExRatesDaily&amp;quot;); ДатаКурса = СервисНБРБ.ФабрикаXDTO.Создать(ТипПараметраДатаКурса); ДатаКурса.onDate = ТекущаяДата(); КурсыВалютНаДату = СервисНБРБ.ExRatesDaily(ДатаКурса); СписокКурсовВалют = КурсыВалютНаДату.ExRatesDailyResult.diffgram.NewDataSet.DailyExRatesOnDate; Объект.КурсыВалют.Очистить(); Для Каждого ИнформацияОКурсеВалюты Из СписокКурсовВалют Цикл КурсВалюты = Объект.КурсыВалют.Добавить(); ЗаполнитьЗначенияСвойств(КурсВалюты, ИнформацияОКурсеВалюты); КонецЦикла;  </description>
+    </item>
+    
+    <item>
+      <title>Сколько нужно прищепок?</title>
+      <link>https://popov.by/post/2011-08-19-number-of-pegs/</link>
+      <pubDate>Fri, 19 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2011-08-19-number-of-pegs/</guid>
+      <description>Как обычно вешаются шторы на прищепки? Вешаем два края на крайние прищепки, а затем средней прищепкой цепляем нижнюю точку провиса. И так повторяем до тех пор, пока не используем все прищепки. Но чаще всего не получается средней прищепки, т.е. для одного провиса остается четное количество прищепок. Как получить правильное количество прищепок, чтобы вешать всегда было удобно? Вот формула количества прищепок (выведена имперически):
+n выбираем по вкусу. :-)
+Для примера:
+ 2 + 2^0 = 3 2 + 2^0 + 2^1 = 5 2 + 2^0 + 2^1 + 2^2 = 9 2 + 2^0 + 2^1 + 2^2 + 2^3 = 17 и т.</description>
+    </item>
+    
+    <item>
+      <title>1С error - Для полей, начиная с FileName, не хватило значений (pos=19)</title>
+      <link>https://popov.by/post/2011-07-29-1c-error-filename-pos19/</link>
+      <pubDate>Fri, 29 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2011-07-29-1c-error-filename-pos19/</guid>
+      <description>Ошибка проявляется на 1С:предприятие 8.1.15.14
+В процессе обновления информационной базы произошла критическая ошибка. по причине: Ошибка SDBL: Для полей, начиная с FileName, не хватило значений (pos=19)  Вариант решения — очистить таблицы изменений конфигурации:
+TRUNCATE TABLE _ConfigChangeRec TRUNCATE TABLE _ConfigChangeRec_ExtProps  </description>
+    </item>
+    
+    <item>
+      <title>1С:Предприятие 8 и представление UID</title>
+      <link>https://popov.by/post/2011-06-27-1c-uid/</link>
+      <pubDate>Mon, 27 Jun 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2011-06-27-1c-uid/</guid>
+      <description>Типовой вид ссылки (например, при сериализации): 435837b5-0cf2-11e0-8093-00271346fa31
+Структурный вид ссылки: MMMMMMMM-NNNN-ZZZZ-XXXX-YYYYYYYYYYYY
+При нарушение ссылочной целостности, данные отображаются платформой в виде: (140:809300271346fa3111e00cf2435837b5)
+или в структурном виде: LLL:XXXXYYYYYYYYYYYYZZZZNNNNMMMMMMMM
+В данном случае LLL - код объекта (справочника, документа и т.п.). Можно определить по постфиксу в наименовании таблиц на уровне СУБД.</description>
+    </item>
+    
+  </channel>
+</rss>

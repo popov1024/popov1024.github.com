@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Routing on Andrey Popov</title>
+    <link>https://popov.by/tags/routing/</link>
+    <description>Recent content in Routing on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Tue, 02 Feb 2016 00:00:00 +0300</lastBuildDate>
+    
+	<atom:link href="https://popov.by/tags/routing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Удобная маршрутизация Mikrotik (RouterOS)</title>
+      <link>https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/post/udobnaia-marrutizatsiia-mikrotik/</guid>
+      <description>Задача Необходимо маршрутизировать несколько ip или подсетей по одному правилу.
+Решение Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&amp;hellip;
+Благо RouterOS поддерживает работу со списками и маркировку пакетов.
+И так, создаем список work:
+/ip firewall address-list add address=10.10.0.0/16 list=work add address=192.168.1.0/24 list=work  Делаем пометку workt пакетов согласно данного списка work:</description>
+    </item>
+    
+  </channel>
+</rss>

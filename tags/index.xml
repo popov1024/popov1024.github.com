@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Andrey Popov</title>
+    <link>https://popov.by/tags/</link>
+    <description>Recent content in Tags on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Mon, 09 May 2016 00:00:00 +0300</lastBuildDate>
+    
+	<atom:link href="https://popov.by/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1c</title>
+      <link>https://popov.by/tags/1c/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/1c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Digitalocean</title>
+      <link>https://popov.by/tags/digitalocean/</link>
+      <pubDate>Tue, 20 Jun 2017 23:21:20 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/digitalocean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://popov.by/tags/docker/</link>
+      <pubDate>Tue, 20 Jun 2017 23:21:20 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker Compose</title>
+      <link>https://popov.by/tags/docker-compose/</link>
+      <pubDate>Wed, 14 Jun 2017 22:51:45 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Letsencrypt</title>
+      <link>https://popov.by/tags/letsencrypt/</link>
+      <pubDate>Tue, 20 Jun 2017 23:21:20 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/letsencrypt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mikrotik</title>
+      <link>https://popov.by/tags/mikrotik/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/mikrotik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Monit</title>
+      <link>https://popov.by/tags/monit/</link>
+      <pubDate>Tue, 20 Jun 2017 23:21:20 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/monit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nginx</title>
+      <link>https://popov.by/tags/nginx/</link>
+      <pubDate>Tue, 20 Jun 2017 23:21:20 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Routing</title>
+      <link>https://popov.by/tags/routing/</link>
+      <pubDate>Tue, 02 Feb 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/routing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sms</title>
+      <link>https://popov.by/tags/sms/</link>
+      <pubDate>Sat, 09 Aug 2014 22:08:59 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/sms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teamcity</title>
+      <link>https://popov.by/tags/teamcity/</link>
+      <pubDate>Mon, 09 May 2016 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/teamcity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tips</title>
+      <link>https://popov.by/tags/tips/</link>
+      <pubDate>Wed, 14 Jun 2017 22:51:45 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://popov.by/tags/ubuntu/</link>
+      <pubDate>Sun, 27 Dec 2015 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wi Fi</title>
+      <link>https://popov.by/tags/wi-fi/</link>
+      <pubDate>Sun, 27 Dec 2015 00:00:00 +0300</pubDate>
+      
+      <guid>https://popov.by/tags/wi-fi/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

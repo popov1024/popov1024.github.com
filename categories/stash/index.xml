@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stash on Andrey Popov</title>
+    <link>https://popov.by/categories/stash/</link>
+    <description>Recent content in Stash on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Thu, 02 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/stash/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Backup Stash</title>
+      <link>https://popov.by/post/2014-01-02-backup-stash/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-02-backup-stash/</guid>
+      <description>java -Dstash.home=/opt/stash-home/ -Dbackup.home=/opt/stash-backup -Dstash.user=user -Dstash.password=password -Dstash.baseUrl=http://example.com:7990 -jar /opt/stash-backup-client-1.1.0/stash-backup-client.jar  </description>
+    </item>
+    
+  </channel>
+</rss>

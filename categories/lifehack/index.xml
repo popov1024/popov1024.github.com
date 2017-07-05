@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lifehack on Andrey Popov</title>
+    <link>https://popov.by/categories/lifehack/</link>
+    <description>Recent content in Lifehack on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Fri, 19 Aug 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/lifehack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Сколько нужно прищепок?</title>
+      <link>https://popov.by/post/2011-08-19-number-of-pegs/</link>
+      <pubDate>Fri, 19 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2011-08-19-number-of-pegs/</guid>
+      <description>Как обычно вешаются шторы на прищепки? Вешаем два края на крайние прищепки, а затем средней прищепкой цепляем нижнюю точку провиса. И так повторяем до тех пор, пока не используем все прищепки. Но чаще всего не получается средней прищепки, т.е. для одного провиса остается четное количество прищепок. Как получить правильное количество прищепок, чтобы вешать всегда было удобно? Вот формула количества прищепок (выведена имперически):
+n выбираем по вкусу. :-)
+Для примера:
+ 2 + 2^0 = 3 2 + 2^0 + 2^1 = 5 2 + 2^0 + 2^1 + 2^2 = 9 2 + 2^0 + 2^1 + 2^2 + 2^3 = 17 и т.</description>
+    </item>
+    
+  </channel>
+</rss>

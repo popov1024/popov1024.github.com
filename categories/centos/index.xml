@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Centos on Andrey Popov</title>
+    <link>https://popov.by/categories/centos/</link>
+    <description>Recent content in Centos on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Wed, 13 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/centos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TeamCity in Linux</title>
+      <link>https://popov.by/post/2013-11-13-teamcity-linux/</link>
+      <pubDate>Wed, 13 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-13-teamcity-linux/</guid>
+      <description>Установка TeamCity для Linux освещена не плохо, но как-то смазан процесс создания автостарта данного сервиса. В моем случае интересен только сам сервер (без сборщика-агента) и работает все на CentOS 5.
+Отдельный пользователь в системе:
+sudo /usr/sbin/useradd teamcity sudo passwd teamcity  Содержимое стартового скрипта /etc/init.d/teamcity
+#!/bin/bash # # teamcity TeamCity Continuous Integration Server # # chkconfig: 345 80 30 # description: TeamCity is a continuous Integration Server # processname: teamcity # config: /etc/sysconfig/teamcity # # TeamCity Linux service controller script case &amp;quot;$1&amp;quot; in start) su - teamcity -c &amp;quot;cd /opt/jetbrains/teamcity/bin/ ; .</description>
+    </item>
+    
+  </channel>
+</rss>

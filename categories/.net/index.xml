@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.Net on Andrey Popov</title>
+    <link>https://popov.by/categories/.net/</link>
+    <description>Recent content in .Net on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sun, 24 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>singleton class csharp</title>
+      <link>https://popov.by/post/2013-11-24-singleton-class-csharp/</link>
+      <pubDate>Sun, 24 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-24-singleton-class-csharp/</guid>
+      <description>По методу Джеффри Рихтера использую такой singleton:
+using System; using System.Threading; public sealed class singletonclass { private static readonly Object SLock = new Object(); private static singletonclass _instance; private readonly int bar; private singletonclass() { bar = 123; } public static singletonclass Instance { get { if (_instance != null) return _instance; Monitor.Enter(SLock); var temp = new singletonclass(); Interlocked.Exchange(ref _instance, temp); Monitor.Exit(SLock); return _instance; } } public int foo() { return bar; } } </description>
+    </item>
+    
+  </channel>
+</rss>

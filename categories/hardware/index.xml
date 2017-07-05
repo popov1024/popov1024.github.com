@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hardware on Andrey Popov</title>
+    <link>https://popov.by/categories/hardware/</link>
+    <description>Recent content in Hardware on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sat, 18 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/hardware/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MacMini(Mid 2011)and RAM DDR3 1600</title>
+      <link>https://popov.by/post/2014-01-18-macmini-and-ram-ddr3-1600/</link>
+      <pubDate>Sat, 18 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-01-18-macmini-and-ram-ddr3-1600/</guid>
+      <description>Мой MacMini (середина 2011), хоть и заявленна поддержка DDR3 1333 MHz, прекрасно работает с DDR3 1600 (PC3-12800 CL11 204-Pin SODIMM). Тестировал от вендора Kingston.
+Кстати, заявленные макисмум 8 Gb тоже не правда. 16 Gb вполне себя работоспособно чувствуют.</description>
+    </item>
+    
+  </channel>
+</rss>

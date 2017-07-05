@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Review on Andrey Popov</title>
+    <link>https://popov.by/categories/review/</link>
+    <description>Recent content in Review on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Sun, 28 Apr 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/review/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Обзор гаджетов #2 - Арковая клавиатура</title>
+      <link>https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/</link>
+      <pubDate>Sun, 28 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-04-28-obzor-ghadzhietov-number-2-arkovaia-klaviatura/</guid>
+      <description>Для своих windows-дел купил себе Microsoft Arc Keyboard.
+Основной критерий при выборе был размер, схожий с Apple Wireless Keyboard, низкий профиль клавиш и беспроводность. Очень понравилось слегка упругое нажатие клавиш.
+Первый минус данной клавиатуры - радио не стандарта Bluetooth. Однако очень порадовало магнитное крепление донгла с нижней части клавиатуры.
+Верхний ряд меня привел в шок. Зачем мне там home, end, pagedown, pageup? Почему не сделать их аналоги с помощью комбинации Fn + arrow?</description>
+    </item>
+    
+    <item>
+      <title>Обзор гаджетов #1 - Eye-Fi</title>
+      <link>https://popov.by/post/2013-04-22-obzor-ghadzhietov-number-1-eye-fi/</link>
+      <pubDate>Mon, 22 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-04-22-obzor-ghadzhietov-number-1-eye-fi/</guid>
+      <description>Относительно недавно купил попробовать с eBay карточку памяти Eye-Fi Connect X2 4Gb. Мой фотоаппарат Nikon D3100 в характеристиках имел совместимость с данными карточками и уж как было не попробовать.
+Сразу скажу, что я привык фотографировать все в RAW, однако данная карточка не поддерживает данный формат для передачи, о чем честно в принципе и заявлено на сайте.
+Что же в конечном счете позволяет сделать данный гаджет? Если ваш фотоаппарат не оснащен Wi-Fi (почему производители массово не внедряют - я не понимаю), то эта карточка позволит вам весь отснятый материал передать на компьютер или смартфон (поддерживаются iOS и Android) с помощью программы &amp;ldquo;Eye-Fi Center&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Обзор гаджетов #0 - Самый лучший роутер</title>
+      <link>https://popov.by/post/2013-04-05-obzor-ghadzhietov-number-0-samyi-luchshii-routier/</link>
+      <pubDate>Fri, 05 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-04-05-obzor-ghadzhietov-number-0-samyi-luchshii-routier/</guid>
+      <description>Беспорно, для домашнего использования самые лучшии роутеры производит Mikrotik. В каком еще роутере можно встретить такой спектр функциональных опций за относительно скромный ценник?
+Обладая Wi-Fi категории N и пятью гигабитными портами, он позволил настроить необходимый мне вариант сети:
+ Одновременное подключение к двум интернет провайдерам Гибкая настройка файревола и QoS PPTP и L2TP сервер Удаленный доступ по SSH  Если вдруг чего-то из коробки нет, то можно использовать скрипты. Например, использование сервиса DyDNS.</description>
+    </item>
+    
+  </channel>
+</rss>

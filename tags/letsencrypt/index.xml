@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Letsencrypt on Andrey Popov</title>
+    <link>https://popov.by/tags/letsencrypt/</link>
+    <description>Recent content in Letsencrypt on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Tue, 20 Jun 2017 23:21:20 +0300</lastBuildDate>
+    
+	<atom:link href="https://popov.by/tags/letsencrypt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Собственная система мониторинга сайтов</title>
+      <link>https://popov.by/post/self_site_monitoring/</link>
+      <pubDate>Tue, 20 Jun 2017 23:21:20 +0300</pubDate>
+      
+      <guid>https://popov.by/post/self_site_monitoring/</guid>
+      <description>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность. Можно пойти по пути покупки услуг (или пользоваться бесплатными) соответствущих сервисjd. Благо их много.
+Но тут всегда сталкиваемся с несколькими проблемами: периодичность опроса и гибкость настройки.
+Другой вариант поднять свой сервис мониторинга, о чем и пойдет далее речь.
+Для наших целей будем использовать следующие сервисы и технологии: - DigitalOcean - Monit - Docker - Nginx - letsencrypt</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wsdl on Andrey Popov</title>
+    <link>https://popov.by/categories/wsdl/</link>
+    <description>Recent content in Wsdl on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru-Ru</language>
+    <copyright>&amp;copy; 2017</copyright>
+    <lastBuildDate>Tue, 08 Apr 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov.by/categories/wsdl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1C WSDL and fields order</title>
+      <link>https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/</link>
+      <pubDate>Tue, 08 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2014-04-08-1c-wsdl-and-fields-order/</guid>
+      <description>Столкнулся с особенностью 1С:Предприятие 8 в части валидации сообщений SOAP: порядок полей в ответе должен строго соответствовать порядку полей в описании. Иначе будут происходить ошибки вида:
+Проверка свойства &#39;Foo&#39;: форма: Элемент имя: {http://xmlns.oracle.com/orawsv/WS/myws}Foo тип: {http://xmlns.oracle.com/orawsv/WS/myws}fooType Не установлено значение одного из следующих свойств: Bar  Для данного примера - не соответсве полей Foo и Bar.</description>
+    </item>
+    
+    <item>
+      <title>PowerShell SOAP</title>
+      <link>https://popov.by/post/2013-11-18-powershell-soap/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov.by/post/2013-11-18-powershell-soap/</guid>
+      <description>Пример вызова метода Web сервиса посредством SOAP:
+$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force $mycreds = New-Object System.Management.Automation.PSCredential (&amp;quot;userName&amp;quot;, $secpasswd) $uri = &amp;quot;http://localhost/IB/ws/example?wsdl&amp;quot; try { $service = New-WebServiceProxy -Uri $uri -Credential $mycreds } catch { Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39; } if($service -ne $null){ try{ $version = $service.GetVersion() echo $version } catch{ Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39; } }  В данном случае использовался вызов Web сервиса 1C:Предприятие 8.2</description>
+    </item>
+    
+  </channel>
+</rss>
